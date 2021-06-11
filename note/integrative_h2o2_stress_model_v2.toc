@@ -1,0 +1,13 @@
+\contentsline {section}{\numberline {1}Background knowledge}{2}{section.1}
+\contentsline {subsection}{\numberline {1}\textit {Escherichia coli}}{2}{subsection.1.1}
+\contentsline {subsection}{\numberline {2}\textit {Pseudomonas aeruginosa}}{3}{subsection.1.2}
+\contentsline {section}{\numberline {2}Modeling H2O2 diffusion, production and decomposition}{4}{section.2}
+\contentsline {subsection}{\numberline {1}Model assumptions}{4}{subsection.2.1}
+\contentsline {subsection}{\numberline {2}Mathematical equations}{4}{subsection.2.2}
+\contentsline {subsection}{\numberline {3}Parameterization}{5}{subsection.2.3}
+\contentsline {subsection}{\numberline {4}Results and discussion}{6}{subsection.2.4}
+\contentsline {subsubsection}{\numberline {4.1}OxyR activation senses both H2O2 concentration and cell redox status}{6}{subsubsection.2.4.1}
+\contentsline {subsubsection}{\numberline {4.2}The relation between intracellular and extracellular H2O2 concentration is threshold-like}{6}{subsubsection.2.4.2}
+\contentsline {subsubsection}{\numberline {4.3}The threshold-behavior is caused by zero-order ultrasensitivity under Ahp saturation}{7}{subsubsection.2.4.3}
+\contentsline {subsubsection}{\numberline {4.4}The zero-order ultrasensitivity is experimentally confirmed by \textit {in vivo} measurement of oxidized OxyR fraction}{8}{subsubsection.2.4.4}
+\contentsline {section}{\numberline {3}References}{10}{section.3}

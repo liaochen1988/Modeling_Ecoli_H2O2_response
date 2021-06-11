@@ -1,0 +1,10 @@
+Filename	Variable	Unit
+****_c_O2	Oxygen concentration	mM
+****_c_x	Biomass (concentration)	g/L
+****_Yield	Biomass-Glucose-Yield	g/mmol
+****_0.5_v_Oxi	Oxygen uptake rate, Oxidase flux	mmol/g/h
+****_v_Ferm	Fermentation products flux	mmol/g/h
+****_R_ArcA	ArcA activity	%
+****_Q_redox_state	Quinone redox state	%
+****_c_Q	Quinone concentration	mmol/g
+****_c_QH2	Quinol concentration	mmol/g

@@ -1,0 +1,186 @@
+\begin{thebibliography}{10}
+
+\bibitem{mishra2012bacteria}
+Surabhi Mishra and James Imlay.
+\newblock Why do bacteria use so many enzymes to scavenge hydrogen peroxide?
+\newblock {\em Archives of biochemistry and biophysics}, 525(2):145--160, 2012.
+
+\bibitem{seaver2001alkyl}
+Lauren~Costa Seaver and James~A Imlay.
+\newblock Alkyl hydroperoxide reductase is the primary scavenger of endogenous
+  hydrogen peroxide in escherichia coli.
+\newblock {\em Journal of bacteriology}, 183(24):7173--7181, 2001.
+
+\bibitem{madar2013promoter}
+Daniel Madar, Erez Dekel, Anat Bren, Anat Zimmer, Ziv Porat, and Uri Alon.
+\newblock Promoter activity dynamics in the lag phase of escherichia coli.
+\newblock {\em BMC systems biology}, 7(1):136, 2013.
+
+\bibitem{hillion2015thiol}
+Melanie Hillion and Haike Antelmann.
+\newblock Thiol-based redox switches in prokaryotes.
+\newblock {\em Biological chemistry}, 396(5):415--444, 2015.
+
+\bibitem{heo2010major}
+Yun-Jeong Heo, In-Young Chung, Wan-Je Cho, Bo-Young Lee, Jung-Hoon Kim,
+  Kyoung-Hee Choi, Jin-Won Lee, Daniel~J Hassett, and You-Hee Cho.
+\newblock The major catalase gene (kata) of pseudomonas aeruginosa pa14 is
+  under both positive and negative control of the global transactivator oxyr in
+  response to hydrogen peroxide.
+\newblock {\em Journal of bacteriology}, 192(2):381--390, 2010.
+
+\bibitem{hassett1999quorum}
+Daniel~J Hassett, Ju-Fang Ma, James~G Elkins, Timothy~R McDermott, Urs~A
+  Ochsner, Susan~EH West, Ching-Tsan Huang, Jessie Fredericks, Scott Burnett,
+  Philip~S Stewart, et~al.
+\newblock Quorum sensing in pseudomonas aeruginosa controls expression of
+  catalase and superoxide dismutase genes and mediates biofilm susceptibility
+  to hydrogen peroxide.
+\newblock {\em Molecular microbiology}, 34(5):1082--1093, 1999.
+
+\bibitem{seaver2001hydrogen}
+Lauren~Costa Seaver and James~A Imlay.
+\newblock Hydrogen peroxide fluxes and compartmentalization inside growing
+  escherichia coli.
+\newblock {\em Journal of bacteriology}, 183(24):7182--7189, 2001.
+
+\bibitem{tomalin2016increasing}
+Lewis~Elwood Tomalin, Alison~Michelle Day, Zoe~Elizabeth Underwood,
+  Graham~Robert Smith, Piero Dalle~Pezze, Charalampos Rallis, Waseema Patel,
+  Bryan~Craig Dickinson, J{\"u}rg B{\"a}hler, Thomas~Francis Brewer, et~al.
+\newblock Increasing extracellular h2o2 produces a bi-phasic response in
+  intracellular h2o2, with peroxiredoxin hyperoxidation only triggered once the
+  cellular h2o2-buffering capacity is overwhelmed.
+\newblock {\em Free Radical Biology and Medicine}, 95:333--348, 2016.
+
+\bibitem{lee2004redox}
+Cheolju Lee, Soon~Mi Lee, Partha Mukhopadhyay, Seung~Jun Kim, Sang~Chul Lee,
+  Woo-Sung Ahn, Myeong-Hee Yu, Gisela Storz, and Seong~Eon Ryu.
+\newblock Redox regulation of oxyr requires specific disulfide bond formation
+  involving a rapid kinetic reaction path.
+\newblock {\em Nature Structural and Molecular Biology}, 11(12):1179, 2004.
+
+\bibitem{aaslund1999regulation}
+Fredrik {\AA}slund, Ming Zheng, Jon Beckwith, and Gisela Storz.
+\newblock Regulation of the oxyr transcription factor by hydrogen peroxide and
+  the cellular thiol—disulfide status.
+\newblock {\em Proceedings of the National Academy of Sciences},
+  96(11):6161--6165, 1999.
+
+\bibitem{pillay2016quantitative}
+Ch{\'e}~S Pillay, Beatrice~D Eagling, Scott~RE Driscoll, and Johann~M Rohwer.
+\newblock Quantitative measures for redox signaling.
+\newblock {\em Free Radical Biology and Medicine}, 96:290--303, 2016.
+
+\bibitem{ferrell2014ultrasensitivity}
+James~E Ferrell~Jr and Sang~Hoon Ha.
+\newblock Ultrasensitivity part i: Michaelian responses and zero-order
+  ultrasensitivity.
+\newblock {\em Trends in biochemical sciences}, 39(10):496--503, 2014.
+
+\bibitem{imlay2013molecular}
+James~A Imlay.
+\newblock The molecular mechanisms and physiological consequences of oxidative
+  stress: lessons from a model bacterium.
+\newblock {\em Nature Reviews Microbiology}, 11(7):443, 2013.
+
+\bibitem{claiborne1979purification}
+Al~Claiborne and I~Fridovich.
+\newblock Purification of the o-dianisidine peroxidase from escherichia coli b.
+  physicochemical characterization and analysis of its dual catalatic and
+  peroxidatic activities.
+\newblock {\em Journal of Biological Chemistry}, 254(10):4245--4252, 1979.
+
+\bibitem{parsonage2008substrate}
+Derek Parsonage, P~Andrew Karplus, and Leslie~B Poole.
+\newblock Substrate specificity and redox potential of ahpc, a bacterial
+  peroxiredoxin.
+\newblock {\em Proceedings of the National Academy of Sciences},
+  105(24):8209--8214, 2008.
+
+\bibitem{li2014quantifying}
+Gene-Wei Li, David Burkhardt, Carol Gross, and Jonathan~S Weissman.
+\newblock Quantifying absolute protein synthesis rates reveals principles
+  underlying allocation of cellular resources.
+\newblock {\em Cell}, 157(3):624--635, 2014.
+
+\bibitem{scott2010interdependence}
+Matthew Scott, Carl~W Gunderson, Eduard~M Mateescu, Zhongge Zhang, and Terence
+  Hwa.
+\newblock Interdependence of cell growth and gene expression: origins and
+  consequences.
+\newblock {\em Science}, 330(6007):1099--1102, 2010.
+
+\bibitem{hui2015quantitative}
+Sheng Hui, Josh~M Silverman, Stephen~S Chen, David~W Erickson, Markus Basan,
+  Jilong Wang, Terence Hwa, and James~R Williamson.
+\newblock Quantitative proteomic analysis reveals a simple strategy of global
+  resource allocation in bacteria.
+\newblock {\em Mol. Syst. Biol.}, 11(2):784, 2015.
+
+\bibitem{kubitschek1984independence}
+Herbert~E Kubitschek, William~W Baldwin, Sally~J Schroeter, and Rheinhard
+  Graetzer.
+\newblock Independence of buoyant cell density and growth rate in
+  \textit{Escherichia coli}.
+\newblock {\em J. Bacteriol.}, 158(1):296--299, 1984.
+
+\bibitem{basan2015inflating}
+Markus Basan, Manlu Zhu, Xiongfeng Dai, Mya Warren, Daniel S{\'e}vin, Yi-Ping
+  Wang, and Terence Hwa.
+\newblock Inflating bacterial cells by increased protein synthesis.
+\newblock {\em Mol. Syst. Biol.}, 11(10):836, 2015.
+
+\bibitem{bremer2008modulation}
+Hans Bremer and Patrick~P Dennis.
+\newblock Modulation of chemical composition and other parameters of the cell
+  at different exponential growth rates.
+\newblock {\em EcoSal Plus}, 3(1), 2008.
+
+\bibitem{aidelberg2014hierarchy}
+Guy Aidelberg, Benjamin~D Towbin, Daphna Rothschild, Erez Dekel, Anat Bren, and
+  Uri Alon.
+\newblock Hierarchy of non-glucose sugars in \textit{Escherichia coli}.
+\newblock {\em BMC Syst. Biol.}, 8(1):133, 2014.
+
+\bibitem{gourse1996rrna}
+Richard~L Gourse, Tamas Gaal, Michael~S Bartlett, J~Alex Appleman, and Wilma
+  Ross.
+\newblock \text{rRNA} transcription and growth rate-dependent regulation of
+  ribosome synthesis in \textit{Escherichia coli}.
+\newblock {\em Annu. Rev. Microbiol.}, 50(1):645--677, 1996.
+
+\bibitem{lemke2011direct}
+Justin~J Lemke, Patricia Sanchez-Vazquez, Hector~L Burgos, Gina Hedberg, Wilma
+  Ross, and Richard~L Gourse.
+\newblock Direct regulation of \textit{Escherichia coli} ribosomal protein
+  promoters by the transcription factors {ppGpp} and {DksA}.
+\newblock {\em Proc. Natl. Acad. Sci. USA}, 108(14):5712--5717, 2011.
+
+\bibitem{piir2011ribosome}
+Kerli Piir, Anton Paier, Aivar Liiv, Tanel Tenson, and {\"U}lo Maiv{\"a}li.
+\newblock Ribosome degradation in growing bacteria.
+\newblock {\em EMBO Rep.}, 12(5):458--462, 2011.
+
+\bibitem{deutscher2003degradation}
+Murray~P Deutscher.
+\newblock Degradation of stable \text{RNA} in bacteria.
+\newblock {\em J. Biol. Chem.}, 278(46):45041--45044, 2003.
+
+\bibitem{klumpp2013molecular}
+Stefan Klumpp, Matthew Scott, Steen Pedersen, and Terence Hwa.
+\newblock Molecular crowding limits translation and cell growth.
+\newblock {\em Proc. Natl. Acad. Sci. USA}, 110(42):16754--16759, 2013.
+
+\bibitem{maitra2015bacterial}
+Arijit Maitra and Ken~A Dill.
+\newblock Bacterial growth laws reflect the evolutionary importance of energy
+  efficiency.
+\newblock {\em Proc. Natl. Acad. Sci. USA}, 112(2):406--411, 2015.
+
+\bibitem{marr1991growth}
+Allen~G Marr.
+\newblock Growth rate of \textit{Escherichia coli}.
+\newblock {\em Microbiol. Rev.}, 55(2):316--333, 1991.
+
+\end{thebibliography}

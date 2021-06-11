@@ -1,0 +1,116 @@
+\begin{thebibliography}{10}
+
+\bibitem{mishra2012bacteria}
+Surabhi Mishra and James Imlay.
+\newblock Why do bacteria use so many enzymes to scavenge hydrogen peroxide?
+\newblock {\em Archives of biochemistry and biophysics}, 525(2):145--160, 2012.
+
+\bibitem{seaver2001alkyl}
+Lauren~Costa Seaver and James~A Imlay.
+\newblock Alkyl hydroperoxide reductase is the primary scavenger of endogenous
+  hydrogen peroxide in escherichia coli.
+\newblock {\em Journal of bacteriology}, 183(24):7173--7181, 2001.
+
+\bibitem{hillion2015thiol}
+Melanie Hillion and Haike Antelmann.
+\newblock Thiol-based redox switches in prokaryotes.
+\newblock {\em Biological chemistry}, 396(5):415--444, 2015.
+
+\bibitem{arenas2011escherichia}
+Felipe~A Arenas, Paulo~C Covarrubias, Juan~M Sandoval, Jose~M Perez-Donoso,
+  James~A Imlay, and Claudio~C Vasquez.
+\newblock The escherichia coli btue protein functions as a resistance
+  determinant against reactive oxygen species.
+\newblock {\em PLoS One}, 6(1):e15979, 2011.
+
+\bibitem{heo2010major}
+Yun-Jeong Heo, In-Young Chung, Wan-Je Cho, Bo-Young Lee, Jung-Hoon Kim,
+  Kyoung-Hee Choi, Jin-Won Lee, Daniel~J Hassett, and You-Hee Cho.
+\newblock The major catalase gene (kata) of pseudomonas aeruginosa pa14 is
+  under both positive and negative control of the global transactivator oxyr in
+  response to hydrogen peroxide.
+\newblock {\em Journal of bacteriology}, 192(2):381--390, 2010.
+
+\bibitem{hassett1999quorum}
+Daniel~J Hassett, Ju-Fang Ma, James~G Elkins, Timothy~R McDermott, Urs~A
+  Ochsner, Susan~EH West, Ching-Tsan Huang, Jessie Fredericks, Scott Burnett,
+  Philip~S Stewart, et~al.
+\newblock Quorum sensing in pseudomonas aeruginosa controls expression of
+  catalase and superoxide dismutase genes and mediates biofilm susceptibility
+  to hydrogen peroxide.
+\newblock {\em Molecular microbiology}, 34(5):1082--1093, 1999.
+
+\bibitem{khakimova2013stringent}
+Malika Khakimova, Heather~G Ahlgren, Joe~J Harrison, Ann~M English, and Dao
+  Nguyen.
+\newblock The stringent response controls catalases in pseudomonas aeruginosa:
+  Implications for hydrogen peroxide and antibiotic tolerance.
+\newblock {\em Journal of bacteriology}, pages JB--02061, 2013.
+
+\bibitem{aaslund1999regulation}
+Fredrik {\AA}slund, Ming Zheng, Jon Beckwith, and Gisela Storz.
+\newblock Regulation of the oxyr transcription factor by hydrogen peroxide and
+  the cellular thiol—disulfide status.
+\newblock {\em Proceedings of the National Academy of Sciences},
+  96(11):6161--6165, 1999.
+
+\bibitem{seaver2001hydrogen}
+Lauren~Costa Seaver and James~A Imlay.
+\newblock Hydrogen peroxide fluxes and compartmentalization inside growing
+  escherichia coli.
+\newblock {\em Journal of bacteriology}, 183(24):7182--7189, 2001.
+
+\bibitem{claiborne1979purification}
+Al~Claiborne and I~Fridovich.
+\newblock Purification of the o-dianisidine peroxidase from escherichia coli b.
+  physicochemical characterization and analysis of its dual catalatic and
+  peroxidatic activities.
+\newblock {\em Journal of Biological Chemistry}, 254(10):4245--4252, 1979.
+
+\bibitem{parsonage2008substrate}
+Derek Parsonage, P~Andrew Karplus, and Leslie~B Poole.
+\newblock Substrate specificity and redox potential of ahpc, a bacterial
+  peroxiredoxin.
+\newblock {\em Proceedings of the National Academy of Sciences},
+  105(24):8209--8214, 2008.
+
+\bibitem{li2014quantifying}
+Gene-Wei Li, David Burkhardt, Carol Gross, and Jonathan~S Weissman.
+\newblock Quantifying absolute protein synthesis rates reveals principles
+  underlying allocation of cellular resources.
+\newblock {\em Cell}, 157(3):624--635, 2014.
+
+\bibitem{lee2004redox}
+Cheolju Lee, Soon~Mi Lee, Partha Mukhopadhyay, Seung~Jun Kim, Sang~Chul Lee,
+  Woo-Sung Ahn, Myeong-Hee Yu, Gisela Storz, and Seong~Eon Ryu.
+\newblock Redox regulation of oxyr requires specific disulfide bond formation
+  involving a rapid kinetic reaction path.
+\newblock {\em Nature Structural and Molecular Biology}, 11(12):1179, 2004.
+
+\bibitem{tomalin2016increasing}
+Lewis~Elwood Tomalin, Alison~Michelle Day, Zoe~Elizabeth Underwood,
+  Graham~Robert Smith, Piero Dalle~Pezze, Charalampos Rallis, Waseema Patel,
+  Bryan~Craig Dickinson, J{\"u}rg B{\"a}hler, Thomas~Francis Brewer, et~al.
+\newblock Increasing extracellular h2o2 produces a bi-phasic response in
+  intracellular h2o2, with peroxiredoxin hyperoxidation only triggered once the
+  cellular h2o2-buffering capacity is overwhelmed.
+\newblock {\em Free Radical Biology and Medicine}, 95:333--348, 2016.
+
+\bibitem{ferrell2014ultrasensitivity}
+James~E Ferrell~Jr and Sang~Hoon Ha.
+\newblock Ultrasensitivity part i: Michaelian responses and zero-order
+  ultrasensitivity.
+\newblock {\em Trends in biochemical sciences}, 39(10):496--503, 2014.
+
+\bibitem{pillay2016quantitative}
+Ch{\'e}~S Pillay, Beatrice~D Eagling, Scott~RE Driscoll, and Johann~M Rohwer.
+\newblock Quantitative measures for redox signaling.
+\newblock {\em Free Radical Biology and Medicine}, 96:290--303, 2016.
+
+\bibitem{imlay2013molecular}
+James~A Imlay.
+\newblock The molecular mechanisms and physiological consequences of oxidative
+  stress: lessons from a model bacterium.
+\newblock {\em Nature Reviews Microbiology}, 11(7):443, 2013.
+
+\end{thebibliography}

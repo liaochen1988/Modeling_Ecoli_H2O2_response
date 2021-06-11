@@ -1,0 +1,33 @@
+\contentsline {section}{\numberline {1}Background knowledge}{2}
+\contentsline {subsection}{\numberline {1}\textit {Escherichia coli}}{2}
+\contentsline {subsection}{\numberline {2}\textit {Pseudomonas aeruginosa}}{3}
+\contentsline {section}{\numberline {2}Modeling H2O2 diffusion, production and decomposition}{3}
+\contentsline {subsection}{\numberline {1}Unregulated model (constant Ahp and KatG)}{4}
+\contentsline {subsubsection}{\numberline {1.1}Response of intracellular H2O2 is biphasic}{4}
+\contentsline {subsubsection}{\numberline {1.2}Ultrasensitivity of OxyR oxidation to increasing extracellular H2O2 concentration}{5}
+\contentsline {subsection}{\numberline {2}Regulated model (Ahp and KatG expression regulated by OxyR)}{7}
+\contentsline {section}{\numberline {3}Simple cell growth model}{8}
+\contentsline {subsection}{\numberline {1}Derivation of a Minimal Cell Growth Model for \textit {E. coli}}{8}
+\contentsline {subsubsection}{\numberline {1.1}A coarse-grained model of \textit {E. coli} proteome}{8}
+\contentsline {subsubsection}{\numberline {1.2}The precursor production, consumption and degradation rates}{8}
+\contentsline {subsubsection}{\numberline {1.3}The ribosome synthesis and degradation rates}{9}
+\contentsline {subsubsection}{\numberline {1.4}The synthesis and degradation rates of global regulator}{9}
+\contentsline {subsubsection}{\numberline {1.5}The specific growth rate}{10}
+\contentsline {subsubsection}{\numberline {1.6}Summary}{10}
+\contentsline {subsection}{\numberline {2}Nondimensionalization}{10}
+\contentsline {subsection}{\numberline {3}Parameters}{11}
+\contentsline {subsection}{\numberline {4}Steady state solution}{11}
+\contentsline {section}{\numberline {4}Cell growth model with fermentation and ATP limitation}{11}
+\contentsline {subsection}{\numberline {1}Derivation of a cell growth model for \textit {E.coli} with fermentation and ATP limitation}{11}
+\contentsline {subsection}{\numberline {2}Nondimensionalization}{12}
+\contentsline {subsection}{\numberline {3}Parameters}{13}
+\contentsline {section}{\numberline {5}Cell growth model with fermentation and overflow}{13}
+\contentsline {subsection}{\numberline {1}Derivation of a cell growth model for \textit {E.coli} with fermentation and overflow}{13}
+\contentsline {subsection}{\numberline {2}Nondimensionlization}{14}
+\contentsline {subsection}{\numberline {3}Parameters}{15}
+\contentsline {section}{\numberline {6}Cell growth model with fermentation and overflow in space}{16}
+\contentsline {subsection}{\numberline {1}Derivation of a cell growth model for \textit {E.coli} with fermentation and overflow in space}{16}
+\contentsline {subsection}{\numberline {2}Nondimensionlization}{17}
+\contentsline {subsection}{\numberline {3}Parameters}{19}
+\contentsline {section}{\numberline {7}Multiple strains growth model with fermentation and overflow}{19}
+\contentsline {subsection}{\numberline {1}Derivation of multiple strains growth model for \textit {E.coli} with fermentation and overflow}{19}

@@ -1,0 +1,20 @@
+\contentsline {section}{\numberline {1}Model overview}{3}{section.1}
+\contentsline {section}{\numberline {2}Coarse-grained model of \textit {E. coli} growth under methionine limitation}{4}{section.2}
+\contentsline {section}{\numberline {3}Background knowledge}{6}{section.3}
+\contentsline {subsection}{\numberline {1}Catalase and peroxidase}{6}{subsection.3.1}
+\contentsline {subsubsection}{\numberline {1.1}Relative importance of various H2O2-degrading enzymes}{7}{subsubsection.3.1.1}
+\contentsline {subsubsection}{\numberline {1.2}Oxidation and reduction in proteins}{7}{subsubsection.3.1.2}
+\contentsline {subsubsection}{\numberline {1.3}OxyR-mediated redox sensing}{8}{subsubsection.3.1.3}
+\contentsline {section}{\numberline {4}Modeling thioredoxin and glutaredoxin pathway}{9}{section.4}
+\contentsline {subsection}{\numberline {1}Glutaredoxin model}{9}{subsection.4.1}
+\contentsline {section}{\numberline {5}Modeling H2O2 diffusion, production and decomposition}{11}{section.5}
+\contentsline {subsection}{\numberline {1}Model overview}{11}{subsection.5.1}
+\contentsline {subsection}{\numberline {2}Model assumptions}{11}{subsection.5.2}
+\contentsline {subsection}{\numberline {3}Mathematical equations}{11}{subsection.5.3}
+\contentsline {subsection}{\numberline {4}Parameterization}{12}{subsection.5.4}
+\contentsline {subsection}{\numberline {5}Results and discussion}{13}{subsection.5.5}
+\contentsline {subsubsection}{\numberline {5.1}OxyR activation senses both H2O2 concentration and cell redox status}{13}{subsubsection.5.5.1}
+\contentsline {subsubsection}{\numberline {5.2}The relation between intracellular and extracellular H2O2 concentration is threshold-like}{14}{subsubsection.5.5.2}
+\contentsline {subsubsection}{\numberline {5.3}The threshold-behavior is caused by zero-order ultrasensitivity under Ahp saturation}{15}{subsubsection.5.5.3}
+\contentsline {subsubsection}{\numberline {5.4}The zero-order ultrasensitivity is experimentally confirmed by \textit {in vivo} measurement of oxidized OxyR fraction}{16}{subsubsection.5.5.4}
+\contentsline {section}{\numberline {6}References}{18}{section.6}

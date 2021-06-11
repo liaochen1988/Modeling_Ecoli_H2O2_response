@@ -1,0 +1,601 @@
+%% PNAStwoS.tex
+%% Sample file to use for PNAS articles prepared in LaTeX
+%% For two column PNAS articles
+%% Version: Apr 15, 2008
+
+
+%% BASIC CLASS FILE
+%\documentclass{pnastwo}
+\documentclass[10pt]{article}
+\usepackage[hang,flushmargin]{footmisc}
+\usepackage{mathtools}
+\usepackage{capt-of}
+\usepackage{xcolor}
+%% ADDITIONAL OPTIONAL STYLE FILES
+\usepackage{mathptmx}
+\usepackage{graphicx}
+\usepackage[margin=1in]{geometry}
+\usepackage[numbers]{natbib}
+%\newcommand{\rom}[1]{\uppercase\expandafter{\romannumeral #1\relax}}%\usepackage{titlesec}
+%\usepackage[pdftex]{graphicx}
+%\usepactxkage{pnastwoF}
+\usepackage{amssymb,amsfonts,amsmath}
+%\usepackage[numbers,sort&compress]{natbib}
+\usepackage{mhchem}
+%\usepackage{subeqnarray}
+%\usepackage{cases}
+\usepackage{color}
+\usepackage{verbatim}
+\usepackage{xcolor}
+%\usepackage{romannum}
+\usepackage{braket}
+\usepackage{siunitx}
+\usepackage{tocloft}
+\usepackage{units}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{hyperref}
+\usepackage{tabularx}
+\usepackage{multirow}
+\usepackage[skins,theorems]{tcolorbox}
+\tcbset{highlight math style={enhanced,
+  colframe=red,colback=white,arc=0pt,boxrule=1pt}}
+\renewcommand\thesection{\arabic{section}}
+%\usepackage[figurename=Figure.,
+%                  justification=RaggedRight,
+%                  labelfont={bf, footnotesize},
+%                  textfont={footnotesize},position=top]{caption}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{tabularx}
+\usepackage{multirow}
+\usepackage{fixltx2e}
+\usepackage{textgreek}
+\usepackage[T1]{fontenc}
+%\usepackage{ulem}
+\usepackage[normalem]{ulem} %to strike the words
+\newcolumntype{C}[1]{>{\arraybackslash}p{#1}}
+\usepackage[labelfont=bf]{caption}
+
+
+\usepackage{color} %for \textcolor
+\usepackage{epsfig}
+\usepackage{floatflt}
+\usepackage{wrapfig}
+%\usepackage{titlesec}
+
+
+\usepackage{float}
+\usepackage{times}
+\usepackage{helvet}
+\usepackage{amsmath}
+\headheight = 0.0 in
+\headsep = 0.0 in
+
+\newcommand{\todo}[1]{{\color{red}{[#1]}}}
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+%\renewcommand{\thesection}{\Alph{section}}
+\renewcommand{\familydefault}{\sfdefault}
+
+\setcounter{secnumdepth}{5}
+\setcounter{tocdepth}{5}
+
+
+\long\def\symbolfootnote[#1]#2{\begingroup%
+\def\thefootnote{\fnsymbol{footnote}}\footnote[#1]{#2}\endgroup}
+
+\renewcommand{\figurename}{{Fig.}}
+
+\newcommand{\ra}{\rightarrow}
+\newcommand{\nubot}{nubot}
+\newcommand{\degree}{$^{\circ}$C}
+
+\long\def\remove #1{}
+
+\newcommand{\red}[1]{\textcolor{red}{#1}}
+\newcommand{\redd}[1]{\textcolor{red}{#1}}
+\newcommand{\peng}[1]{\textcolor{red}{peng: #1}}
+\newcommand{\tbd}[1]{\textcolor{red}{To be added: #1}}
+
+
+%\setcounter{page}{1} \pagenumbering{arabic}
+\pagestyle{plain} \setcounter{page}{1} \pagenumbering{arabic}
+
+%\renewcommand{\theequation}{S\arabic{equation}}
+%\renewcommand{\figurename}{\textbf{Supplemental Figure}}
+%\renewcommand{\tablename}{\textbf{Supplemental Table}}
+%\renewcommand{\thefigure}{S\arabic{figure}}
+%\renewcommand{\thetable}{S\arabic{table}}
+%\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+%\usepackage[T1]{fontenc}
+%\usepackage{fourier}
+%\usepackage{cmbright}
+%\usepackage{etoolbox}
+%\patchcmd{\thebibliography}{\section*{\refname}}{}{}{}
+\renewcommand\refname{}
+%\textcolor{black}{}
+%\newcommand{\blackt}[1]{\textcolor{black}{#1}}
+%\newcommand{\blue}[1]{\textcolor{red}{#1}}
+\newcommand{\sub}[1]{\textsubscript{#1}}
+\newcommand{\supp}[1]{\textsuperscript{#1}}
+\renewcommand{\thefootnote}{$\dagger$}
+\newcommand{\redt}[1]{\textcolor{black}{#1}}
+\newcommand{\aeb}[1]{\textcolor{black}{#1}}
+\newcommand{\aebN}[1]{\textcolor{black}{#1}}
+\newcommand{\orangecl}[1]{\textcolor{black}{#1}}
+\newcommand{\clred}[1]{\textcolor{red}{#1}}
+\newcommand{\clblue}[1]{\textcolor{blue}{#1}}
+\newcommand{\clredd}[1]{\textcolor{black}{#1}}
+\newcommand{\clredtable}[1]{\color{black}{#1}}
+\newcommand{\tsub}[1]{\textsubscript{#1}}
+\newcommand{\tsup}[1]{\textsuperscript{#1}}
+ \renewcommand{\familydefault}{\sfdefault}
+
+\DeclareSIUnit{\molar}{M}
+\DeclareSIUnit{\nucl}{nucl.}
+\DeclareSIUnit{\aa}{aa}
+
+%\newcommand{\supp}[1]{\supp{#1}}
+%\usepackage{mathpazo}
+%% OPTIONAL MACRO DEFINITIONS
+%\def\s{\sigma}
+\usepackage[
+singlelinecheck=true % <-- important
+]{caption}
+
+\makeatletter
+\renewcommand\paragraph{\@startsection{paragraph}{4}{\z@}%
+            {-2.5ex\@plus -1ex \@minus -.25ex}%
+            {1.25ex \@plus .25ex}%
+            {\small\small\bfseries}}
+\makeatother
+\setcounter{secnumdepth}{4} % how many sectioning levels to assign numbers to
+\setcounter{tocdepth}{4}    % how many sectioning levels to show in ToC
+%\usepackage[sort, numbers]{natbib}
+%\setcitestyle{square}
+%\setcounter{secnumdepth}{4}
+
+%\titleformat{\paragraph}
+%{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+%\titlespacing*{\paragraph}
+%{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+
+\renewcommand{\contentsname}{}
+\renewcommand*\subsectionmark[1]{\markright{#1}}
+\renewcommand{\thesubsection}{\arabic{subsection}}
+
+
+\begin{document}
+
+\title{Integrative Modeling of Bacterial H2O2 Stress Responses}
+\author{Chen Liao}
+
+\maketitle
+\tableofcontents
+
+\clearpage
+\begin{abstract}
+Reactive oxygen species (ROS) such as superoxide, hydrogen peroxide (H2O2), and hydroxyl radical, can be produced by intracellular aerobic respiration and/or environments. They are toxic to bacterial cells, leading to loss of fitness, including high mutation rates, growth defects, and even cell death. To protect themselves from the deleterious effects of ROS, cells have developed a wide range of antioxidant systems. However, oxidative stress may occur when the balance between ROS production and antioxidant defense is disrupted. In this study, we aim to develop a computational model to understand how bacteria defense ROS and maintain redox homeostasis under hydrogen peroxide stress.
+\end{abstract}
+
+\clearpage
+\section{Model overview}
+
+Our computational model consists of three modules:
+\begin{itemize}
+\item{A detailed kinetic model that describes respiration and fermentation through primary metabolic pathways at different dissolved oxygen concentrations. These pathways include glycolysis, pentose phosphate pathway, TCA cycle, etc.}
+\item{A coarse-grained model that describes amino acid biosynthesis, ribosome production and cell growth. We assume that methionine and MetE are the growth-limiting amino acid and enzyme respectively.}
+\item{A detailed kinetic model that describes H2O2 sensing and degradation, OxyR-dependent regulation of anti-oxidant genes, glutaredoxin and thioredoxin systems, oxidation of methionine and MetE (glutathionylation).  }
+\end{itemize}
+
+\clearpage
+\section{Coarse-grained model of \textit{E. coli} growth under methionine limitation}
+
+\small
+\allowdisplaybreaks[1]
+\begin{eqnarray}
+ \dfrac{d [Met]}{d t} &=& \underbrace{k_{cat,Met}[MetE]}_{\substack{\text{met synthesis rate} }}-\underbrace{v_{aa}f_{met}}_{\substack{\text{met consumption rate}}}- \underbrace{k_{ox,met}[H_i][Met]}_{\text{Met oxidation}} \nonumber \\
+ &+& \underbrace{\dfrac{k_{red,met}[Met_{ox}][Trx_{red}][MsrA]}{K_{m,Met_{ox}}[Met_{ox}] + K_{m,trx}[Trx_{red}] + [Met_{ox}][Trx_{red}]}}_{\text{Met reduction}} - \underbrace{\mu[Met]}_{\substack{\text{met} \\ \text{dilution rate}}} \label{eq:dadt_summary}\\
+ \dfrac{d [Met_{ox}]}{dt} &=& \underbrace{k_{ox,met}[H_i][Met]}_{\text{Met oxidation}}  - \underbrace{\dfrac{k_{red,met}[Met_{ox}][Trx_{red}][MsrA]}{K_{m,Met_{ox}}[Met_{ox}] + K_{m,trx}[Trx_{red}] + [Met_{ox}][Trx_{red}]}}_{\text{Met reduction}} - \underbrace{\mu[Met_{ox}]}_{\substack{\text{MetSO} \\ \text{dilution rate}}} \\
+ \dfrac{d [MetE]}{d t} &=& \underbrace{v_{aa}(1-\phi_Q)\dfrac{[G]}{K_{i,g}+[G]}\dfrac{\alpha_{metE}}{L_{metE}}}_{\substack{\text{MetE synthesis rate} }}-\underbrace{k_{ox,metE}[GSSG][MetE]}_{\text{MetE glutathionylation}} + \underbrace{k_{red,metE}[GSH][MetE_{ox}]}_{\text{MetE deglutathionylation}} \nonumber\\
+ &+& \underbrace{\dfrac{k^\prime_{red,metE}[MetE_{ox}][GSH]^2[Grx]}{[MetE_{ox}] + h_{gssg}[GSSG] + h_{gsh}[GSH]^2}}_{\text{MetE deglutathionylation}} - \underbrace{\mu[MetE]}_{\substack{\text{MetE} \\ \text{dilution rate}}} \label{eq:drdt_summary} \\
+\dfrac{d [MetE_{ox}]}{dt} &=& \underbrace{k_{ox,metE}[GSSG][MetE]}_{\text{MetE glutathionylation}} - \underbrace{k_{red,metE}[GSH][MetE_{ox}]}_{\text{MetE deglutathionylation}} - \underbrace{\dfrac{k^\prime_{red,metE}[MetE_{ox}][GSH]^2[Grx]}{[MetE_{ox}] + h_{gssg}[GSSG] + h_{gsh}[GSH]^2}}_{\text{MetE deglutathionylation}}  - \underbrace{\mu[MetE_{ox}]}_{\substack{\text{MetE-SSG} \\ \text{dilution rate}}} \\
+\dfrac{d [Rib]}{d t} &=& \underbrace{v_{aa}(1-\phi_Q)\dfrac{K_{i,g}}{K_{i,g}+[G]}\dfrac{1}{L_{r}}}_{\substack{\text{ribosome synthesis rate} }}-\underbrace{\mu[Rib]}_{\substack{\text{ribosome} \\ \text{dilution rate}}} \label{eq:drdt_summary} \\
+  \dfrac{d [G]}{d t} &=& \underbrace{k_g\frac{K_{m,met}}{K_{m,met}+[Met]}}_{\substack{\text{ppGpp synthesis rate}}}-\underbrace{d_{g}[G]}_{\substack{\text{ppGpp}\\\text{degradation rate}}} ~\label{eq:dgdt_summary}\\
+  v_{aa} &=& \underbrace{\dfrac{k_{elong}[Rib][Met]}{K_{m,met}+[Met]}}_{\text{amino acid synthesis rate}} \\
+    \mu &=& \underbrace{\dfrac{v_{aa}}{P_t}}_{\text{growth rate}}\label{eq:growth_rate_summary}
+  \end{eqnarray}
+
+\clearpage
+\small
+\allowdisplaybreaks[1]
+\begin{eqnarray}
+ \dfrac{d [Met]}{d t} &=& \underbrace{k_{cat,Met}[MetE]}_{\substack{\text{met synthesis rate} }}-\underbrace{v_{aa}f_{met}}_{\substack{\text{met consumption rate}}}- \underbrace{\mu[Met]}_{\substack{\text{met} \\ \text{dilution rate}}} \label{eq:dadt_summary}\\
+  \dfrac{d [MetE]}{d t} &=& \underbrace{v_{aa}(1-\phi_Q)\dfrac{[G]}{K_{i,g}+[G]}\dfrac{\alpha_{metE}}{L_{metE}}}_{\substack{\text{MetE synthesis rate} }} - \underbrace{\mu[MetE]}_{\substack{\text{MetE} \\ \text{dilution rate}}} \label{eq:drdt_summary} \\
+\dfrac{d [Rib]}{d t} &=& \underbrace{v_{aa}(1-\phi_Q)\dfrac{K_{i,g}}{K_{i,g}+[G]}\dfrac{1}{L_{r}}}_{\substack{\text{ribosome synthesis rate} }}-\underbrace{\mu[Rib]}_{\substack{\text{ribosome} \\ \text{dilution rate}}} \label{eq:drdt_summary} \\
+  \dfrac{d [G]}{d t} &=& \underbrace{k_g\frac{K_{m,met}}{K_{m,met}+[Met]}}_{\substack{\text{ppGpp synthesis rate}}}-\underbrace{d_{g}[G]}_{\substack{\text{ppGpp}\\\text{degradation rate}}} ~\label{eq:dgdt_summary}\\
+  v_{aa} &=& \underbrace{\dfrac{k_{elong}[Rib][Met]}{K_{m,met}+[Met]}}_{\text{amino acid synthesis rate}} \\
+    \mu &=& \underbrace{\dfrac{v_{aa}}{P_t}}_{\text{growth rate}}\label{eq:growth_rate_summary}
+  \end{eqnarray}
+
+\begin{table}[!htbp]
+\centering
+\small
+\setlength\extrarowheight{5pt}
+\begin{tabular}{|c|l|c|c|c|c|}
+\hline
+ \textbf{Symbol} & \textbf{Description} & \textbf{Value}  & \textbf{Unit}  & \textbf{Formula} & \textbf{Source}  \\ \hline
+ $L_{r}$ & \# of amino acids in a ribosome & $11738$ & & $7336\times1.6$ & \cite{klumpp2013molecular} \\ \hline
+ $L_{e}$ & \# of amino acids in MetE & $753$ &   & & \cite{li2014quantifying} \\ \hline
+ $k_{elong}$ & maximum rate of peptide elongation & $7.56\times 10^4$ & \unitfrac{1}{hr} & $\unitfrac[21]{1}{s} \times \unitfrac[3600]{s}{hr}$ & \cite{marr1991growth} \\ \hline
+ $k_g$ & maximum rate of ppGpp synthesis &  $3.6\times 10^{3}$ & \unitfrac{1}{hr} & $\unitfrac[1]{1}{s} \times \unitfrac[3600]{s}{hr}$   & \cite{marr1991growth} \\ \hline
+ $d_g$ &  first-order rate constant of ppGpp degradation & $1.26\times 10^{2}$ & \unitfrac{1}{hr} & $\unitfrac[0.035]{1}{s} \times \unitfrac[3600]{s}{hr}$ & \cite{marr1991growth} \\ \hline
+ $K_{m,met}$ & dissociation constant for methionine & $2.00\times 10^{1}$ & $\mu M$ & & \cite{marr1991growth} \\ \hline
+ $K_{ig}$ & dissociation constant for ppGpp & $6.00\times10^{1}$ & $\mu M$ & & \\ \hline
+ $P_t$ & total peptide concentration & $3.00\times 10^6$ & $\mu M$ & & \cite{marr1991growth} \\ \hline
+ $\phi_Q$ & fraction of proteome that are invariant & $0.52$ & & & \\ \hline
+ $k_{cat}$ & turnover rate of MetE & $432.00$ & \unitfrac{1}{hr} & $\unitfrac[0.12]{1}{s} \times \unitfrac[3600]{s}{hr}$ & \cite{li2014quantifying} \\ \hline
+ $f_{met}$ & fraction of Met codons & $0.027$ & & & \cite{li2014quantifying}  \\ \hline
+ $\alpha_{metE}$ & fraction of MetE in all metabolic enzymes &  $0.60$ & & &  \cite{li2014quantifying}  \\ \hline
+ \end{tabular}
+\caption{Model parameters used in the model.}
+\label{tab:parameters}
+\end{table}
+\normalsize
+
+
+\clearpage
+\section{Background knowledge}
+
+%%%%%%%%%%%%%%%
+% Catalase and peroxidase
+\subsection{Catalase and peroxidase}
+
+\textit{E. coli} has at least 9 enzymes that have been proposed to be calatases or peroxidases~\cite{mishra2012bacteria}, which differ by their electron sources
+\begin{enumerate}
+\centering
+\item{Catalase: $2H_2O_2 \rightarrow O_2+2H_2O$}
+\item{Peroxidase: $RH_2+H_2O_2 \rightarrow R+2H_2O$}
+\end{enumerate}
+The electron source of catalase is from H2O2 itself and no exogenous electron source is needed. However, peroxidase can differ in their electron donors (i.e., $RH_2$), which could be glutathione, thiolredoxins, NAD(P)H, cytochrome \textit{c}, dyes and other unknowns. 
+
+Catalase rely on iron or manganese so they fall into two categories: heme (an iron-containing compound) catalyses and non-heme catalase (or manganese). Catalase with only catalytic activity are called mono-functional catalase, and those with both catalytic activity and peroxidatic activities are referred to as bifunctional catalase or catalase-peroxidase. \textit{E. coli} also contains two catalases, HPI (hydroperoxidase I, encoded by \textit{katG}) and HPII (hydroperoxidase II, encoded by \textit{katE}). 
+
+Peroxidase fall into two categories: thiol (i.e., RSH)-based peroxidase and non-thiol peroxidase. All thiol-based peroxiredoxin contain a conserved cysteine that reacts with H2O2 and forms a disulfide before getting reduced back to free thiol. Depending on the variations in the mechanisms of thiol regeneration, \textbf{they are divided into two major subfamilies: glutathione peroxidase (Gpx) and peroxiredoxin (Prx)}. An overview of the functions of Gpx and Prx is shown in Fig.~\ref{fig:prx_gpx_function}.
+
+\begin{figure}[h!]
+\centering
+  \includegraphics[width=0.75\linewidth]{Gpx_prx_function.png}
+  \caption{Regulation of the redox homeostasis by glutathione (GSH), thioredoxin (Trx), and glutaredoxin (Grx) system (Fig. 1 in Ref.~\cite{aoyama2015glutathione}).}
+  \label{fig:prx_gpx_function}
+\end{figure}
+
+GPx catalyzes the reaction of hydrogen peroxide with GSH to produce glutathione disulfide (GSSG). Glutathione disulfide is subsequently reduced through the actions of glutathione reductase (GR) and NADPH.
+
+\textit{E. coli} contains three Prx: alkyl hydroperoxide (ROOH; alkyl means unspecific R group) reductases (AhpCF), thiol peroxidase (Tpx), and bacterioferritin comigratory protein (BCP):
+\begin{itemize}
+\item{AhpCF consists of two subunits: the small subunit (AhpC), which reduces organic peroxides to their corresponding alcohols, and the large subunit (AhpF), which is a close homologue of bacterial TrxR that can use either NADPH or NADH as a source of reducing power to reduce AhpC-disulfide ($ROOH+NADH+H^+\rightarrow ROH+NAD^++H_2O$). \textbf{Even though AhpF can obtain electrons from NADH, based on the relatively low availability of NADH in cells, the AhpC is likely fueled predominantly by NADPH.}}
+
+\item{\textit{E. coli} thiol peroxidase (Tpx, p20, scavengase) is a thioredoxin-linked thiol peroxidase and uses reducing equivalents from thioredoxin (Trx1) and thioredoxin reductase to reduce alkyl hydroperoxides.}
+
+\item{BCP is another member of thiol peroxidase family and showed a thioredoxin-dependent thiol peroxidase activity. BCP preferentially reduced linoleic acid hydroperoxide rather than H2O2 and t-butyl hydroperoxide with the use of thioredoxin as an in vivo immediate electron donor~\cite{jeong2000thioredoxin}.}
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Relative importance of various H2O2-degrading enzymes}
+
+The major H2O2 scavenging enzyme is AhpCF (alkyl hydroperoxide reductase)~\cite{seaver2001alkyl}. Despite the key role of AhpCF, catalase still has an important role in wild-type cells, because the activity of Ahp is saturated at a low concentration of H2O2 ($< 1~\mu M$). In contrast, catalase have high Km ($\sim 1~mM$), and therefore become the predominant scavenger when H2O2 concentrations are high. Additionally,  AhpCF has very limited activity when reducing power is at low concentration (e.g., nutrient starvation). In contrast to AhpCF, catalases can provide protection even in energy-depleted cells.
+
+Other catalases or peroxidases seem to be dispensible:
+\begin{itemize}
+\item{KatE is induced at the transition from exponential phase to stationary phase by RpoS and its induction is OxyR-independent. Mutation in HPII did not affect the log-phase growth phenotype even in strains lacking HPI and/or Ahp~\cite{seaver2001alkyl}.}
+
+\item{The \textit{tpx} mutant did not show any phenotype under aerobic growth, while it is more sensitive to organic hydroperoxides.}
+
+\item{Deletion of \textit{btuE} (a glutathione peroxidase homologue) also does not create sensitivity to H2O2, while the mutant is more sensitive to paraquat and tellurite~\cite{arenas2011escherichia}.}
+
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Oxidation and reduction in proteins}
+
+H2O2 can also be eliminated by oxidizing the cysteine residues of intracellular proteins (Pr-SH=Pr-(SH)2; Pr means Protein). Cysteine (Cys) residues of intracellular proteins contain redox-sensitive thiols that are susceptible to oxidation. On oxidation, the Cys residues of proteins can be reduced, with different characteristics, depending on the microenvironment, through a system of reactions involving GSH-coupled Grx (glutaredoxin) or Thioredoxin (Trx). \textit{E. coli} has three dithiol glutaredoxins, namely Grx1 (grxA), Grx2 (grxB), Grx3 (grxC) and one monothiol glutaredoxin Grx4 (grxD). It also has two Trx, Trx1 (trxA) and Trx2 (trxC). Thioredoxin reductase is encoded by trxB. The glutamate-cystein ligase, glutathione synthetase and glutathione reductase are encoded by gshA, gshB and gor respectively.
+
+The thioredoxin-deficient mutant (trxA) was more sensitive to H2O2 than was the wild-type strain, when challenged in the stationary and exponentially growing phase. Thioredoxin reductase-deficient mutant (trxB) in the stationary phase also exhibited increased sensitivity, compared with the wild-type strain. These results indicated that reduced form of thioredoxin is required for defense against H2O2,
+
+According to Masip et al.~\cite{masip2006many}, exponentially growing E. coli that lack GSH (gshA mutant) has normal resistance to H2O2, but when they reach stationary phase they are more susceptible to killing by H2O2 (9). E. coli gor mutants show diamide sensitivity similar
+to gshA mutants, are somewhat sensitive to paraquat and cumene hydroperoxide, and show increased H2O2 sensitivity in a catalase mutant background. GSH also plays an indirect role in cells under peroxide stress by reducing oxidized OxyR by means of glutaredoxin 1.
+
+The following are based on~\cite{potamitou2002protein}. In a wild type strain, levels of Trx1 increased from the exponential to the stationary phase of growth (1.5-fold to 3400 ng/mg), as did levels of Grx2 (from 2500 to 8000 ng/mg). Grx3 and Trx2 levels were quite stable during growth (4500 and 200 ng/mg, respectively). Grx1 levels decreased from 600 ng/mg at the exponential phase to 285 ng/mg at the stationary phase. A large elevation of Grx1 (20–30-fold), was observed in null mutants for the thioredoxin system whereas levels of the other redoxins in all combinations of examined null mutants barely exceeded a 2–3-fold increase. Measurements of thymidine incorporation in newly synthesized DNA suggested that mainly Grx1 and, to a lesser extent, Trx1 contribute to the reduction of ribonucleotides. All glutaredoxin species were elevated in catalase-deficient strains, implying an antioxidant role for the glutaredoxins. Trx1, Trx2, and Grx1 levels increased after exposure to hydrogen peroxide and decreased after exposure to mercaptoethanol. The levels of Grx2 and Grx3 behaved exactly the opposite, suggesting that the transcription factor OxyR does not regulate their expression.
+
+%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{OxyR-mediated redox sensing}
+
+An overview of redox sensing and regulatory mechanisms of OxyR is shown in Fig.~\ref{fig:oxyr_redox_sensing_regulation}. When the entry rate of H2O2 is high, basal level defense is inadequate and adaptive response is needed. Both Ahp and KatG are transcriptionally induced by the transcriptional regulator, OxyR~\cite{hillion2015thiol}. A key cysteine residue of the OxyR protein is oxidized by H2O2, triggering conformational change from an inactive form (i.e., reduced state) to an active form (oxidized state). The oxidized OxyR then binds to the promoter regions of many genes on the \textit{oxyR} regulon. Reduced OxyR is regenerated by the glutaredoxin/GSH/Gor system upon return to non-stress conditions.  
+
+\begin{figure}[h!]
+\centering
+  \includegraphics[width=0.75\linewidth]{oxyr_redox_sensing_regulation.png}
+  \caption{The thiol-disulfide-switch model of E. coli OxyR and functions of the OxyR regulon (Fig. 2 in Ref.~\cite{antelmann2011thiol}).}
+  \label{fig:oxyr_redox_sensing_regulation}
+\end{figure}
+
+OxyR positively controls genes for peroxide detoxification, such as catalase and peroxiredoxin (katG, ahpCF), Fe-storage miniferritin (dps), glutaredoxin, thioredoxin and glutathione reductase (grxA, trxC, gor), sulfenic acid oxidoreductase (dsbG), ferric uptake regulator (fur), Fe-S-cluster assembly machinery (sufABCDE), ferrochelatase (hemH), manganese import (mntH) and the small RNA (oxyS)~\cite{hillion2015thiol}. OxyR negatively regulates its own expression and that of the genes for the ferric ion reductase (fhuF), the outer membrane protein (flu), the mannonate hydrolase (uxuAB) and gluconate permease (gntP)~\cite{hillion2015thiol}. A comprehensive list of genes in the \textit{oxyR} operon is available \href{https://ecocyc.org/gene?orgid=ECOLI\&id=EG10681\#tab=REGULON}{here}. 
+
+%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%
+\clearpage
+
+\section{Modeling thioredoxin and glutaredoxin pathway}
+
+The thioredoxin and glutaredoxin pathway is shown in Fig.~\ref{fig:thioredoxin_glutaredoxin_pathway}.
+
+\begin{figure}[h!]
+\centering
+  \includegraphics[width=0.5\linewidth]{thioredoxin_glutaredoxin_pathway.jpg}
+  \caption{Thioredoxin and glutaredoxin systems. (Fig. 2 in Ref.~\cite{parent2015comparative}). Thioredoxins (Trx) and glutaredoxins (Grx) primarily serve to reduce oxidized protein cysteine residues (P-SS-P, P-SOH, P-SSG) to regulate or restore their function, and Trx and Grx are in turn maintained by thioredoxin reductase (TR) and glutathione reductase (GR), using reducing equivalents from NADPH.}
+  \label{fig:thioredoxin_glutaredoxin_pathway}
+\end{figure}
+
+\subsection{Glutaredoxin model}
+
+For disulfide bonds, the following reactions occur
+\begin{align*}
+\ce{PSS + Grx(SH)_2 <->[k_{1+}][k_{1-}] GrxSS + P(SH)_2} \\
+\ce{2GSH + GrxSS <->[k_{2+}][k_{2-}] Grx(SH)_2 + GSSG} \\
+\ce{Grx(SH)_2 + GrxSS = Grx_{tot}}
+\end{align*}
+We assume that $\ce{GrxSS}$ or $\ce{Grx(SH)_2}$ are in equilibrium, i.e., $d[GrxSS]/dt=d[Grx(SH)_2]/dt=0$, giving
+\begin{eqnarray}
+[GrxSS] &=& \frac{Grx_{tot}\left(k_1^+[PSS]+k_2^-[GSSG]\right)}{k_1^+[PSS]+k_2^-[GSSG]+k_1^-[P(SH)_2]+k_2^+[GSH]^2} \\
+~[Grx(SH)_2] &=& \frac{Grx_{tot}\left(k_1^-[P(SH)_2]+k_2^+[GSH]^2\right)}{k_1^+[PSS]+k_2^-[GSSG]+k_1^-[P(SH)_2]+k_2^+[GSH]^2}
+\end{eqnarray}
+Therefore, the protein reduction rate is
+\begin{equation}
+\frac{d[P(SH)_2]}{dt} = \frac{k_1^+k_2^+[PSS][GSH]^2-k_1^-k_2^-[P(SH)_2][GSSG]}{k_1^+[PSS]+k_2^-[GSSG]+k_1^-[P(SH)_2]+k_2^+[GSH]^2}Grx_{tot}
+\end{equation}
+At steady state, we obtain
+\begin{eqnarray}
+\frac{[PSS]_{ss}}{P_{tot}} &=& \dfrac{[GSSG]}{[GSSG]+\dfrac{[GSH]^2}{K_{d1}K_{d2}}}\\
+\frac{[P(SH)_2]_{ss}}{P_{tot}} &=& \dfrac{\dfrac{[GSH]^2}{K_{d1}K_{d2}}}{[GSSG]+\dfrac{[GSH]^2}{K_{d1}K_{d2}}}
+\end{eqnarray}
+under further condition $[P(SH)_2]+[PSS]=P_{tot}$.
+
+For S-glutathionylation, the chemical reactions are similar
+\begin{align*}
+\ce{PSH + GSSG <->[k_{1+}][k_{1-}] PSSG + GSH } \\
+\ce{PSSG + Grx(SH)_2 <->[k_{2+}][k_{2-}] GrxSS + PSH + GSH} \\
+\ce{2GSH + GrxSS <->[k_{3+}][k_{3-}] Grx(SH)_2 + GSSG} \\
+\ce{Grx(SH)_2 + GrxSS = Grx_{tot}}
+\end{align*}
+Under the same assumption that $\ce{GrxSS}$ or $\ce{Grx(SH)_2}$ are in equilibrium, we obtained
+\begin{equation}
+\frac{d[PSH]}{dt} = k_1^-[PSSG][GSH]-k_1^+[PSH][GSSG]+\frac{k_2^+k_3^+[PSSG][GSH]^2-k_2^-k_3^-[PSH][GSH][GSSG]}{k_2^+[PSSG]+k_3^-[GSSG]+k_2^-[PSH][GSH]+k_3^+[GSH]^2}Grx_{to}tT
+\end{equation}
+
+For S-glutathionylation, the chemical reactions are similar
+\begin{align*}
+\ce{PSH + GSSG <->[k_{1+}][k_{1-}] PSSG + GSH } \\
+\ce{PSSG + Grx(SH)_2 ->[k_{2}] GrxSS + PSH + GSH} \\
+\ce{2GSH + GrxSS <->[k_{3+}][k_{3-}] Grx(SH)_2 + GSSG} \\
+\ce{Grx(SH)_2 + GrxSS = Grx_{tot}}
+\end{align*}
+Under the same assumption that $\ce{GrxSS}$ or $\ce{Grx(SH)_2}$ are in equilibrium, we obtained
+\begin{eqnarray}
+\frac{d[PSH]}{dt} &=& k_1^-[PSSG][GSH]-k_1^+[PSH][GSSG] \\
+&+&\frac{k_2^+k_3^+[PSSG][GSH]^2}{k_2^+[PSSG]+k_3^-[GSSG]+k_3^+[GSH]^2}Grx_{tot}
+\end{eqnarray}
+
+\clearpage
+
+
+%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%
+\clearpage
+
+\section{Modeling H2O2 diffusion, production and decomposition}
+
+\subsection{Model overview}
+
+Our computational model uses mass action kinetics and Michaelis-Menten kinetics to describe bacterial responses to intracellular and extracellular H2O2 challenge. The intracellular H2O2 production rate is coupled to percentage of air saturation. For anti-oxidative system, we described three modes of H2O2 elimination, namely, catalase (KatE), peroxidase (AhpCF), oxidation of cysteine residues of the intracellular proteins. 
+
+\subsection{Model assumptions}
+The intracellular H2O2 concentration is determined by the balances of three processes: diffusion, production and decomposition (Fig.~\ref{fig:h2o2_decomposition_schematic_diagram}). To develop a model of H2O2 fluxes, the following assumptions are made
+\begin{enumerate}
+\item{Intracellular H2O2 is produced at a constant rate;}
+\item{Two H2O2-degrading enzymes, Ahp and KatG, are considered;}
+\item{Ahp becomes saturated at a low concentration of H2O2 (low $K_m$), while KatG has a high $K_m$. Therefore, decomposition of H2O2 by Ahp and KatG are modelled using Michaelis-Menten and first-order equation respectively;}
+\item{The total OxyR concentration remains a constant and the equilibrium between oxidized and reduced forms of OxyR can be rapidly reached;}
+\item{Both Ahp and KatG are regulated by the oxidized form of OxyR;}
+\item{Both Ahp and KatG are stable proteins and not actively degraded.}
+\end{enumerate}
+
+\begin{figure}[h!]
+\centering
+  \includegraphics[width=0.5\linewidth]{h2o2_decomposition.pdf}
+  \caption{Schematic diagram of H2O2 reactions. Gene expressions of catalases (KatG) and peroxidases (Ahp) are induced by H2O2 indirectly via oxidation of OxyR.}
+  \label{fig:h2o2_decomposition_schematic_diagram}
+\end{figure}
+
+%%%%%%%%%%%%%%%%%%%%
+\subsection{Mathematical equations}
+Based on the above assumptions, the kinetic equations of intracellular ($[H_{i}]$) and extracellular ($[H_{o}]$) H2O2 concentrations are given by
+\begin{eqnarray}
+\frac{d[H_o]}{dt} &=& -\frac{([H_o]-[H_i])PA}{V_e} \\
+\frac{d[H_i]}{dt} &=& \dfrac{k_{met}+([H_o]-[H_i])PA}{V_c} -\dfrac{k_{cat}[KatG][H_i]}{K_{m,cat}+[H_i]}- \dfrac{k_{ahp}[AhpCF][H_i]}{K_{m,ahp}+[H_i]}\label{eq:dhidt}
+\end{eqnarray}
+where $[Kat]$ and $[Ahp]$ are the concentrations of KatG and Ahp respectively. Parameters include the metabolic production rate of H2O2 ($k_{met}$), the membrane permeability ($P$), the surface area of the membrane ($A$), the cell volume ($V_c$), the medium volume ($V_e$), the specific activity of KatG ($k_{0,cat}$), the Ahp's turnover rate ($k_{0,ahp}$), and the half-maximal degradation concentration ($K_{m,ahp}$). 
+
+Both glutaredoxin 1 and thioredoxin are able to reduce OxyR \textit{in vitro}; however, the former seems to predominate over the latter \textit{in vivo}~\cite{aaslund1999regulation}. The oxidized ($[OxyR_{ox}]$) and reduced ($[OxyR_{red}]$) forms of OxyR can be interconverted through two reactions
+\begin{align*}
+\ce{OxyR_{red} + n_{oxyr}H_2O_2 <->[k_{b+}][k_{b-}] OxyR_{red}(H_2O_2)_{n_{oxyr}} ->[k^{on}_{oxyr,h2o2}] OxyR_{ox}}
+\end{align*}
+\begin{align*}
+\ce{OxyR_{red} + 4GSSG <->[k^{on}_{oxyr,grx}Grx][k^{off}_{oxyr,grx}Grx] OxyR_{ox} + 8GSH }
+\end{align*}
+where $k_{b+}$ and $k_{b-}$ are the forward and reverse binding constants, $n_{oxyr}$ is the stoichiometry of H2O2 molecule in the binding complex between OxyR and H2O2, $k^{on}_{oxyr,h2o2}$ and $k^{on}_{oxyr,grx}$ are the rates of H2O2- and GSH/GSSG ratio-dependent OxyR oxidation, and $k^{off}_{oxyr,grx}$ is the GSH/GSSG ratio-dependent OxyR reduction. Under the assumption of rapid binding/unbinding equilibrium between $OxyR_{red}$ and H2O2, the chemical kinetics in the equation can be described using differential-algebraic equations
+\begin{eqnarray}
+\frac{d[OxyR_{ox}]}{dt} &=& \frac{k^{on}_{oxyr,h2o2}[OxyR_{red}][H_i]^{n_{oxyr}}}{K_{m,oxyr}^{n_{oxyr}}+[H_i]^{n_{oxyr}}} \\
+&+&\left(k^{on}_{oxyr,grx}[OxyR_{red}][GSSG]^4-k^{off}_{oxyr,grx}[OxyR_{ox}][GSH]^8\right)[Grx]\label{eq:doxyrox_dt} \\
+\frac{d[OxyR_{ox}]}{dt} &=& \frac{k^{on}_{oxyr,h2o2}[OxyR_{red}][H_i]^{n_{oxyr}}}{K_{m,oxyr}^{n_{oxyr}}+[H_i]^{n_{oxyr}}} +\left(k^{on}_{oxyr,grx}[OxyR_{red}][GSSG]^4-k^{off}_{oxyr,grx}[OxyR_{ox}][GSH]^8\right)[Grx]\label{eq:doxyrox_dt} \\
+OxyR_t &=& [OxyR_{ox}]+[OxyR_{red}]
+\end{eqnarray}
+where $K_{m,oxyr}(=(k_{b-}+k^{on}_{oxyr,h2o2})/k_{b+})$ is the dissociation constant and $OxyR_t$ is the total OxyR concentration, which is assumed a constant. 
+
+Finally, we assume that the protein synthesis rates of Kat, Ahp and Grx are proportional to the fraction of the oxidized OxyR
+\begin{eqnarray}
+f_{oxyr} &=& \frac{[OxyR_{ox}]}{[OxyR_{ox}]+[OxyR_{red}]} \\
+\frac{d[KatG]}{dt} &=& \alpha_{cat}^{max}f_{oxyr}-\mu[KatG] \\
+\frac{d[AhpCF]}{dt} &=& \alpha_{ahp}^{max}f_{oxyr}-\mu[AhpCF]\\
+\frac{d[Grx]}{dt} &=& \alpha_{grx}^{max}f_{oxyr}-\mu[Grx] \\
+\frac{d[Gor]}{dt} &=& \alpha_{grx}^{max}f_{oxyr}-\mu[Grx]
+\end{eqnarray}
+where $\alpha_{cat}^{max}$ and $\alpha_{ahp}^{max}$ are the maximum production rates of Kat and Ahp respectively and $\mu$ is the specific growth rate (i.e., the dilution rate).
+
+%%%%%%%%%%%%%%%%%%%%
+\subsection{Parameterization}
+
+Parameter values are either obtained from literature or estimated by data fitting (see Table~\ref{tab:parameters})
+\begin{table}[H]
+  \begin{center}
+    \begin{tabular}{|l|l|l|} % Symbol | Value/unit | Source
+    \hline
+      \textbf{Parameter} & \textbf{Value/Unit} & \textbf{Source}\\
+      \hline
+      Membrane permeability ($P$) & $1.6\times 10^{-3}~cm/s$ & Ref. \citenum{seaver2001hydrogen}\\ \hline
+      Membrane area ($A$) & $1.41\times  10^{-7}~cm^2$ & Ref. \citenum{seaver2001hydrogen}\\ \hline
+      Cytoplasmic volume ($V_c$) & $3.23\times 10^{-15}~L$ & Ref. \citenum{seaver2001hydrogen}\\  \hline
+      Metabolic production rate of H2O2 ($k_{met}$) & $4.5\times 10^{-20}~mol/s$ & Ref. \citenum{seaver2001hydrogen}\\  \hline
+      Turnover rate of KatG ($k_{0,cat}$) & $1.63\times 10^4~s^{-1}$ & Ref. \citenum{claiborne1979purification} \\ \hline
+      Half maximal H2O2 degradation concentration ($K_{m,kat}$) & $3.9~mM$ & Ref.~\citenum{claiborne1979purification} \\ \hline 
+      Half inhibition constant by H2O2 ($K_{i,h2o2}$) & $19.55~\mu M$ \\ \hline
+      [Kat] & $20~\mu M$ & Ref. \citenum{seaver2001hydrogen} \\ \hline
+      Specific growth rate ($\mu$) & $0.99~h^{-1}$ & Ref. \cite{campos2014constant} \\ \hline
+      Maximum protein synthesis rate of Kat ($\alpha_{kat}^{max}$) & $19.8~\mu M/h$ & Derived \\ \hline
+      Turnover rate of Ahp ($k_{0,ahp}$) & $52.4~s^{-1}$ & Ref. \citenum{parsonage2008substrate} \\ \hline
+      Half maximal H2O2 degradation concentration ($K_{m,ahp}$) & $149.87~nM$ & Estimated \\ \hline
+      [Ahp] & $12.41~\mu M$ & Ref. \citenum{seaver2001hydrogen} \\ \hline
+      Maximum protein synthesis rate of Ahp ($\alpha_{ahp}^{max}$) & $12.54~\mu M/h$ & Derived \\ \hline
+      OxyR-H2O2 dissociation constant ($K_{m,oxyr}$) & $41.32~\mu M$ & Estimated \\ \hline
+      OxyR-H2O2 binding Hill coefficient ($n_{oxyr}$) & $1.36$ & Estimated \\ \hline
+      H2O2-induced OxyR oxidation rate ($k^{on}_{oxyr,h2o2}$) & $9.99~s^{-1}$ & Estimated \\ \hline
+      Grx-mediated OxyR oxidation rate ($k^{on}_{oxyr,grx}$) & $1.49\times 10^7~s^{-1}M^{-5}$ & Estimated \\ \hline
+      Grx-mediated OxyR reduction rate ($k^{off}_{oxyr,grx}$) & $1.52\times 10^{15}~s^{-1}M^{-9}$ & Estimated \\ \hline
+      [Grx] & $19.2~\mu M$ & Ref. \citenum{potamitou2002protein} \\ \hline
+      Maximum protein synthesis rate of Grx ($\alpha_{grx}^{max}$) & $19.39~\mu M/h$ & Derived \\ \hline
+    \end{tabular}
+        \caption{Parameter values used in the simulations.}
+    \label{tab:parameters}
+  \end{center}
+\end{table}
+
+\noindent\textbf{Note:} Specific growth rate was measured under glucose-minimum medium supplemented with casamino acids. The measured cell length is 3.7 $\mu M$, which is consistent with the cell length at birth (2.32) and division (4.59). 
+
+Imlay~\cite{imlay2013molecular} reported that the titer of AhpC is 5~$\mu$M. Seaver and Imlay reported that the Ahp-mediated H2O2 degradation rate is $2.1\times 10^{-18}$ mol/s, which is equivalent to 12.41 $\mu$M~\cite{seaver2001hydrogen}. They also reported that the catalase rate is $2.7\times 10^{-13}$ L/s, which is equivalent to 19.9597 $\mu$M. Li et al .2014 expressed catalase at a rate of $3.62 \times 10^{-24}$ mol/s, which is equivalent to 2.0905 $\mu$M, which is much lower than that estimated by Seaver and Imlay.
+
+%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Results and discussion}
+
+\subsubsection{OxyR activation senses both H2O2 concentration and cell redox status}
+\label{sect:oxyr_activation_senses_both_h2o2_concentration_and_cell_redox_status}
+Fig.~\ref{fig:fit_oxyr_paras} shows that the H2O2 concentration required to oxidize half of the total OxyR (orange circles; $87.35~nM$) is much lower than that is required to reach half maximal forward oxidation rate (blue circles; $41.32~\mu M$). This can be explained by Eq.~\ref{eq:H50}: $H_{50}$ can be much smaller than $K_{m,oxyr}$ under the condition $k_{oxyr,red}\ll k^{on}_{oxyr,h2o2}$. Our estimation shows that $k_{oxyr,red}/k^{on}_{oxyr,h2o2} = 2.3\times 10^{-4}$. The value of $k_{oxyr,red}$ corresponds to a half life of 5 min, which is consistent with previous observations~\cite{aaslund1999regulation}.
+
+\begin{figure}[H]
+\centering
+  \includegraphics[width=0.5\linewidth]{prediction_oxyr_kinetics_fraction.png}
+  \caption{Eq.~\ref{eq:kswitch} and Eq.~\ref{eq:doxyroxss_dt} were fit to experimental data (orange circles~\cite{aaslund1999regulation}; blue circles~\cite{lee2004redox}).}
+  \label{fig:fit_oxyr_paras}
+\end{figure}
+
+This is interesting because when OxyR proteins are half oxidized, the forward conformational switch rate is only 0.023\% of its observed maximum capacity. The reason why the dynamic ranges of the two responsive curves do not coincide with each other has not been discussed in literature. One possibility is that the oxidation of OxyR is not solely dependent on H2O2 concentration, but also senses the overall redox status. Oxidized OxyR is reduced by the glutaredoxin (GSH) system. Glutathione reductase catalyzes the NADPH-driven reduction of GSSG (the oxidized form of GSH) to GSH; therefore, the GSH recycling is intimately coupled to the balance between NADHP and NADP, which is an indicator of cellular redox state. A drop in the ratio of GSH to GSSG decreases $k_{oxyr,red}$ and consequently activate OxyR regulons to restore redox homeostasis at smaller H2O2 concentration. The huge difference between the H2O2 concentration required to activate conformational switch and required to oxidize OxyR indicates that the cell redox status is low and NADPH may be limiting.
+
+\subsubsection{The relation between intracellular and extracellular H2O2 concentration is threshold-like}
+
+Fig.~\ref{fig:Hin_Hout_relation} shows that the intracellular H2O2 concentration remains a constant before extracellular H2O2 concentration exceeds a threshold ($\approx50~\mu M$). At the maximum buffering capacity, the ratio of extracellular and intracellular H2O2 concentratioin  is approximately 100, as shown in the right panel of Fig.~\ref{fig:Hin_Hout_relation}. Compared to a previous estimate of 10-fold concentration difference~\cite{seaver2001hydrogen}, our estimation is consistent with additional data that was not considered before (we will revisit this point in Sect.~\ref{eq:the_zeroorder_ultrasensivity}). When the extracellular H2O2 increases further, the antioxidant system loses its buffering effect and the intracellular and extracellular H2O2 concentrations are roughly equal. This biphasic response has been reported in yeast strain \textit{Saccharomyces pombe}~\cite{tomalin2016increasing}, where the H2O2-triggered permanent inactivation of Prx due to hyperoxidation is a key mechanism. However, bacterial 2-Cys Prx, such as the \textit{E. coli} peroxiredoxin AhpC, are much less sensitive to hyperoxidation. Our results show that hyperoxidation is not a necessary component of generating the biphasic response.
+
+\begin{figure}[H]
+\centering
+  \includegraphics[width=0.85\linewidth]{Hin_Hout_relation.png}
+  \caption{The absolute intracellular H2O2 concentration (left panel) and relative ratio (right panel) at varied external H2O2 concentration.}
+  \label{fig:Hin_Hout_relation}
+\end{figure}
+
+Bennett et al.~\cite{bennett2009absolute} measured intracellular metabolite concentrations in three growth medium, glucose (77 min), glycerol (89 min) and acetate (139 min). Some of them are shown below
+\begin{table}[H]
+  \begin{center}
+    \begin{tabular}{|l|l|l|l|} % Symbol | Value/unit | Source
+    \hline
+     \textbf{Metabolite} & \textbf{Glucose} & \textbf{Glycerol} & \textbf{Acetate}\\
+      \hline
+      GSH & 16.6 mM ([15.3, 17.9]) & 17.6 mM ([15.1, 20.6]) & 7.97 mM ([5.49, 11.6]) \\ \hline
+      GSSG & 2.37 mM ([1.94, 2.90]) & 7.31 mM ([2.87, 1.86]) & 1.68 mM ([0.867, 3.26]) \\ \hline
+      GSH:GSSG & 7.00 & 2.41 & 4.74 \\ \hline
+      NAD & 2.55 mM ([2.32, 2.80]) & 4.08 mM ([1.28, 13.0]) & 2.43 mM ([1.11, 5.33]) \\ \hline
+      NADH & 83.2 $\mu$M ([54.5, 127]) & 129 $\mu$M ([19.4, 855]) & 135 $\mu$M ([79.1, 231]) \\ \hline
+      NAD:NADH & 30.65 & 31.63 & 18 \\ \hline
+      NADP & 2.08 $\mu$M ([0.14, 31.1]) & N/A & N/A \\ \hline
+      NADPH & 121 $\mu$M ([110, 134]) & 288 $\mu$M ([40.4, 2050]) & 298 $\mu$M ([52.2, 1700]) \\ \hline
+      NADPH:NADP & 58.17 & N/A  & N/A \\ \hline
+    \end{tabular}
+        \caption{Intracellular metabolite concentrations in \textit{E. coli}.}
+    \label{tab:metconc}
+  \end{center}
+\end{table}
+ 
+
+
+%%%%%%%%%%%%%%%%%%%%
+\subsubsection{The threshold-behavior is caused by zero-order ultrasensitivity under Ahp saturation}
+
+Then it is interesting to understand why the antioxidant system loses its buffering effect suddenly within a narrow range of extracellular H2O2 concentration. To allow analytical analysis, we first simplify the model by assuming constant Cat and Ahp concentrations and define two lumped parameters $k_{cat}=k_{0,cat}[Kat]$ and $k_{ahp}=k_{0,ahp}[Ahp]$. We then rewrite Eq.~\ref{eq:dhidt} as follows
+\begin{equation}
+\frac{dH_i}{dt} = k_{met}+([H_o]-[H_i])PA -k_{cat}H_i- \dfrac{k_{ahp}H_i}{K_{m,ahp}+[H_i]}
+\end{equation}
+ At steady state, we can solve $[H_i]$ as a function of $[H_o]$
+\begin{eqnarray}
+[H_i] &=& \frac{-\Delta +\sqrt{\Delta^2+4K_{m,ahp}(PA+k_{cat})(k_{met}+[H_o]PA)}}{2(PA+k_{cat})}  \label{eq:hi_ho}\\
+\Delta &=& K_{m,ahp}PA+K_{m,ahp}k_{cat}-[H_o]PA-k_{met}+k_{ahp}
+\end{eqnarray}
+When $K_{m,ahp}$ is a small parameter (i.e., Ahp becomes saturated easily), we can expand Eq.~\ref{eq:hi_ho} using power series of $K_{m,ahp}$
+\begin{equation*}
+[H_i] = \begin{cases}
+\dfrac{[H_o]PA+k_{met}}{k_{ahp}-[H_o]PA-k_{met}}K_{m,ahp} + \mathcal{O}(K_{m,ahp}^2) & \text{$[H_o]<\dfrac{k_{ahp}-k_{met}}{PA}$}\\
+\\
+\dfrac{[H_o]PA+k_{met}-k_{ahp}}{PA+k_{cat}} + \dfrac{k_{ahp}}{[H_o]PA+k_{met}-k_{ahp}}K_{m,ahp} + \mathcal{O}(K_{m,ahp}^2) &  \text{$[H_o]\ge\dfrac{k_{ahp}-k_{met}}{PA}$}
+\end{cases}
+\end{equation*}
+In the limit of $K_{m,ahp}\to0$, $[H_i]$ switches abruptly from zero to a non-zero value when $[H_o]$ exceeds $(k_{ahp}-k_{met})/(PA)$. This phenomenon is also called zero-order ultrasensitivity~\cite{ferrell2014ultrasensitivity} because such ultrasensitive behavior occurs when enzymes operate near saturation.
+
+%%%%%%%%%%%%%%%%%%%%
+\subsubsection{The zero-order ultrasensitivity is experimentally confirmed by \textit{in vivo} measurement of oxidized OxyR fraction}
+\label{eq:the_zeroorder_ultrasensivity}
+
+If the response of intracellular H2O2 to external H2O2 concentration is indeed ultrasensitive, then this ultrasensitivity must result in the ultrasensitive oxidation of OxyR, i.e., the fraction of oxidized OxyR increases abruptly as well when the extracellular H2O2 concentration exceeds a threshold. Indeed, such ultrasensitivity has been reported by Åslund et al.~\cite{aaslund1999regulation}. Using Åslund's data, Pillay et al.~\cite{pillay2016quantitative} fit a Hill function to the response curve and found that the Hill coefficient is as high as 10.7. By simulating the the steady-state oxidized OxyR fraction at varied extracellular H2O2 concentration (Fig.~\ref{fig:decrease_kmahp}), we showed that decreasing $K_{m,ahp}$ makes OxyR response more and more switch-like.
+
+\begin{figure}[H]
+\centering
+  \includegraphics[width=0.5\linewidth]{ultrasensitivity_oxyr_decrease_Kmahp.png}
+  \caption{Decreasing $K_{m,ahp}$ (values given in the legend) increases ultrasensitivity of OxyR oxidation to extracellular H2O2 concentration.}
+  \label{fig:decrease_kmahp}
+\end{figure}
+
+The value of $K_{m,ahp}$ was firstly estimated to be $1.2~\mu M$ in the paper by Seaver and Imlay~\cite{seaver2001hydrogen}. The only dataset they used to estimate $K_{m,ahp}$ was the H2O2 decomposition rate at different extracellular H2O2 concentrations. With the data, they have to estimate the intracellular H2O2 concentration using their model, which may bring errors in the estimation of $K_{m,ahp}$. Since $K_{m,ahp}$ affects the sensitivity of OxyR oxidation, we re-estimated $K_{m,ahp}$ by combining both the H2O2 decomposition data and the OxyR oxidation data. The best-fits of the two datasets are shown in Fig.~\ref{fig:fit_kmahp} and the optimal value of $K_{m,ahp}$ is $140.61~nM$. This value is consistent with previous estimation that an intracellular concentration of about $200~nM$ is sufficient to drive OxyR into the oxidized form~\cite{imlay2013molecular}.
+
+\begin{figure}[H]
+\centering
+  \includegraphics[width=0.85\linewidth]{fitting_results_Kmahp.png}
+  \caption{Fitting $K_{m,ahp}$ to experimental data. Data sources: Left panel~\cite{aaslund1999regulation} and right panel~\cite{seaver2001hydrogen}. For the x-axis of the left panel, \textit{in vitro} and \textit{in vivo} indicate the dependence of oxidized OxyR on intracellular and extracellular H2O2 concentrations respectively. The observed and simulated \textit{"in vitro"} data are the same as shown in Fig.~\ref{fig:fit_oxyr_paras}.}
+  \label{fig:fit_kmahp}
+\end{figure}
+
+
+
+\clearpage
+\section{References}
+\bibliographystyle{unsrt} 
+\bibliography{minimal_model}
+
+\end{document}

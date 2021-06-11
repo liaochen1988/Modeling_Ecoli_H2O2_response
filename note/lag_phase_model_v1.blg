@@ -1,0 +1,71 @@
+This is BibTeX, Version 0.99d (TeX Live 2018)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: lag_phase_model_v1.aux
+The style file: unsrt.bst
+Database file #1: minimal_model.bib
+Repeated entry---line 151 of file minimal_model.bib
+ : @article{hillion2015thiol
+ :                          ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 173 of file minimal_model.bib
+ : @article{heo2010major
+ :                      ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 579 of file minimal_model.bib
+ : @article{li2014quantifying
+ :                           ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 807 of file minimal_model.bib
+ : @article{ferrell2014ultrasensitivity
+ :                                     ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 2478 of file minimal_model.bib
+ : @article{li2014quantifying
+ :                           ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 2706 of file minimal_model.bib
+ : @article{ferrell2014ultrasensitivity
+ :                                     ,
+I'm skipping whatever remains of this entry
+You've used 16 entries,
+            1791 wiz_defined-function locations,
+            554 strings with 7584 characters,
+and the built_in function-call counts, 4477 in all, are:
+= -- 390
+> -- 250
+< -- 1
++ -- 89
+- -- 73
+* -- 390
+:= -- 735
+add.period$ -- 48
+call.type$ -- 16
+change.case$ -- 16
+chr.to.int$ -- 0
+cite$ -- 16
+duplicate$ -- 151
+empty$ -- 393
+format.name$ -- 73
+if$ -- 942
+int.to.chr$ -- 0
+int.to.str$ -- 16
+missing$ -- 16
+newline$ -- 83
+num.names$ -- 16
+pop$ -- 18
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 62
+stack$ -- 0
+substring$ -- 415
+swap$ -- 23
+text.length$ -- 1
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 0
+while$ -- 47
+width$ -- 18
+write$ -- 178
+(There were 6 error messages)

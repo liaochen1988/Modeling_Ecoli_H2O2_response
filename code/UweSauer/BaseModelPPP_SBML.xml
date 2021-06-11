@@ -1,0 +1,2739 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sbml xmlns="http://www.sbml.org/sbml/level2/version4" level="2" version="4">
+  <annotation>
+    <SimBiology xmlns="http://www.mathworks.com">
+      <Version Major="5" Minor="3" Point="0"/>
+    </SimBiology>
+  </annotation>
+  <model id="mwceddeba1_3e97_4b54_a502_948760dac213" name="H2O2StressDC">
+    <listOfCompartments>
+      <compartment id="mw7816f2a1_36b6_47b6_8b44_491f6e89b440" name="unnamed" size="1"/>
+    </listOfCompartments>
+    <listOfSpecies>
+      <species id="mw0d8b580f_28dd_4313_b845_1b4dd772d614" name="G6P" compartment="mw7816f2a1_36b6_47b6_8b44_491f6e89b440" initialAmount="1.1417"/>
+      <species id="mw7fbddda6_bc46_40e6_830e_16532b8cc5a3" name="F6P" compartment="mw7816f2a1_36b6_47b6_8b44_491f6e89b440" initialAmount="0.3092"/>
+      <species id="mw53756e03_5880_4b8c_9416_42956bdbe7b0" name="FBP" compartment="mw7816f2a1_36b6_47b6_8b44_491f6e89b440" initialAmount="1.2067"/>
+      <species id="mw1d36150c_8e87_41cb_a2b0_cd9bdd99e6bf" name="DHAP" compartment="mw7816f2a1_36b6_47b6_8b44_491f6e89b440" initialAmount="0.5459"/>
+      <species id="mw0ea93b69_0d95_4cbd_bca1_d01cc1ab2dda" name="SixPG" compartment="mw7816f2a1_36b6_47b6_8b44_491f6e89b440" initialAmount="0.172"/>
+      <species id="mw32ead82e_2dd5_4623_8339_956c412e2dbf" name="PEP" compartment="mw7816f2a1_36b6_47b6_8b44_491f6e89b440" initialAmount="0.0565"/>
+      <species id="mw350a69ec_4fc7_42b4_bd66_1829d3c47430" name="PYR" compartment="mw7816f2a1_36b6_47b6_8b44_491f6e89b440" initialAmount="1.94412628534517"/>
+      <species id="mw1907e7da_a0f9_4416_b24d_385a6ddac18a" name="P5P" compartment="mw7816f2a1_36b6_47b6_8b44_491f6e89b440" initialAmount="0.4727"/>
+      <species id="mwded59a15_0067_4f92_9856_92e979b2a8b7" name="E4P" compartment="mw7816f2a1_36b6_47b6_8b44_491f6e89b440" initialAmount="1.9186172016616"/>
+      <species id="mwec8d1912_a6df_4e98_858d_dc6cea4a391b" name="S7P" compartment="mw7816f2a1_36b6_47b6_8b44_491f6e89b440" initialAmount="0.1252"/>
+      <species id="mweb23c9bc_bb30_4069_bbbc_66793f88544b" name="NADPH" compartment="mw7816f2a1_36b6_47b6_8b44_491f6e89b440" initialAmount="0.143683808385056"/>
+      <species id="mw7d48e978_8d94_4374_b2dd_a56cc01b156e" name="ROS" compartment="mw7816f2a1_36b6_47b6_8b44_491f6e89b440" initialAmount="1"/>
+    </listOfSpecies>
+    <listOfParameters>
+      <parameter id="mwc96fb343_ce7c_43f4_a226_ac6927b32315" name="a1" value="0"/>
+      <parameter id="mwf1354ebc_8146_4313_93f1_c02042dc3841" name="a2" value="0"/>
+      <parameter id="mw24d51086_57cd_4ddc_8342_217a053d4573" name="a3" value="0"/>
+      <parameter id="mw710fbef5_3d3e_472e_a9ed_6b1dbc121a33" name="a4" value="0"/>
+      <parameter id="mwa9aa3bc5_d4bc_4259_ab7a_24abe1da03a2" name="a5" value="0"/>
+      <parameter id="mwd42471fd_0b75_434f_a9d8_e2604bdc3b1d" name="a6" value="0"/>
+      <parameter id="mw5f4cd289_817c_4a22_8e4a_1f3bc8eea437" name="a7" value="0"/>
+      <parameter id="mwd1bce841_e3b7_4aee_8d34_3bf000268c04" name="a8" value="0"/>
+      <parameter id="mw6f634bf8_8a77_4c71_9422_fa93e0534247" name="a9" value="0"/>
+      <parameter id="mwcb3d8164_da74_4dca_9d93_edc0905c7714" name="a10" value="0"/>
+      <parameter id="mwd967cb01_f038_4a66_945a_2b2f7e4687e6" name="a11" value="0"/>
+      <parameter id="mw67c3667c_1075_4759_b1e7_111927263605" name="a12" value="0"/>
+      <parameter id="mw32189a81_73e5_4865_819d_34a7b1bbfc0f" name="a13" value="0"/>
+      <parameter id="mwddf0a6ff_53ae_44df_9ef6_27f0db5e6d43" name="a14" value="0"/>
+      <parameter id="mw7826bb5a_a8e0_4764_a5c9_b65594761344" name="a15" value="0"/>
+      <parameter id="mwac6a5c11_0be1_4835_83d5_61acd9e065eb" name="a16" value="0"/>
+      <parameter id="mw27e1ef1b_c19a_41c1_966c_352528c0e4c5" name="a17" value="0"/>
+      <parameter id="mw1ddef8fe_3092_40c1_901f_e937c02154ed" name="a18" value="0"/>
+      <parameter id="mw23addafe_9999_4658_b4c0_4e876057e131" name="a19" value="0"/>
+      <parameter id="mw3937279b_e11b_4c22_8d67_c8b064456d0b" name="a20" value="0"/>
+      <parameter id="mw0bdc66d0_30d3_4f58_b24f_4461df931ab2" name="a21" value="0"/>
+      <parameter id="mw582a0870_4510_42a4_8a7f_ccc7f5ce8db4" name="a22" value="0"/>
+      <parameter id="mw3cf10145_3532_4dfb_a953_68648b557921" name="a23" value="0"/>
+      <parameter id="mwa722c8e7_edda_4487_857d_860003bbfa77" name="a24" value="0"/>
+      <parameter id="mwbc5db00c_6497_4650_947b_a0f06bdf61cd" name="a25" value="0"/>
+      <parameter id="mwaf6d17bb_bfc9_4c11_83e6_e2780c747483" name="a26" value="0"/>
+      <parameter id="mw0bb3ae8b_347f_4b6a_8f73_91150c3be3d8" name="a27" value="0"/>
+      <parameter id="mw69bca459_1f74_4462_a2c1_b34ce5f5ded1" name="a28" value="0"/>
+      <parameter id="mwe6bba030_ef90_45f6_9456_090e3d89de1e" name="a29" value="0"/>
+      <parameter id="mwbe88a9d3_8374_4fe0_ab62_b137f6b621bc" name="a30" value="0"/>
+      <parameter id="mwd8baf224_cc99_4084_af52_f35e235b2af9" name="a31" value="0"/>
+      <parameter id="mw8e17cfba_1476_4e44_863b_d723e5da5888" name="a32" value="0"/>
+      <parameter id="mw60308db2_ac6f_4ae3_9389_2f56ab057cb0" name="a33" value="0"/>
+      <parameter id="mwab86662d_3fa3_4673_9faa_242b4b9df25c" name="a34" value="0"/>
+      <parameter id="mw813b0479_e780_4aee_8567_a5451aa1755e" name="a35" value="0"/>
+      <parameter id="mwb6149946_4c2d_4c02_a66c_21baed8c96ef" name="a36" value="0"/>
+      <parameter id="mwce6d0583_5423_414e_8e37_174b66abb59c" name="a37" value="0"/>
+      <parameter id="mw3825ed64_cbbc_4bed_a8c5_e8ee1fe98d30" name="a38" value="0"/>
+      <parameter id="mw7e45c86b_c7c4_4332_ba38_3788d58e9729" name="a39" value="0"/>
+      <parameter id="mwa1dda961_f687_4d63_8d74_df88acbd8eff" name="a40" value="0"/>
+      <parameter id="mwdd4f25d6_9ac2_42cd_9c62_0bfdd8046555" name="a41" value="0"/>
+      <parameter id="mw697aca0c_dc72_4efe_ba3d_921a6935803f" name="a42" value="0"/>
+      <parameter id="mw571c203f_e4ad_4ea5_9642_bda6bc3ca974" name="a43" value="0"/>
+      <parameter id="mw39b68da3_ddec_46a9_8630_207457a6ddd3" name="a44" value="0"/>
+      <parameter id="mwe2a1c4ef_1159_4ad4_b35d_0edc612236f5" name="a45" value="0"/>
+      <parameter id="mwa682e192_22e5_49f0_b9ce_02dd5c15c315" name="a46" value="0"/>
+      <parameter id="mwbb4dc183_53ff_4222_8c1b_5da3507d4e5c" name="a47" value="0"/>
+      <parameter id="mw2f466148_51a0_4e8a_9d21_c14ba6367386" name="a48" value="0"/>
+      <parameter id="mw4e937a0f_01e0_44c6_b054_44545e32ee7e" name="a49" value="0"/>
+      <parameter id="mw523cba3b_b18e_4918_870e_d6585e3e5b64" name="a50" value="0"/>
+      <parameter id="mw5241a9ee_2f68_4995_984e_4a44802a2cce" name="a51" value="0"/>
+      <parameter id="mwfb5185c1_3fb4_4744_837f_c494830cc9cd" name="a52" value="0"/>
+      <parameter id="mw6e6b0c90_6d54_495d_9b8a_c7cb4da738e7" name="a53" value="0"/>
+      <parameter id="mwb319216c_a89a_4bea_bb95_8f30544b53a9" name="a54" value="0"/>
+      <parameter id="mw1e6cc9db_7271_448d_8e8d_dd3767178964" name="a55" value="0"/>
+      <parameter id="mwb22b4300_cf5d_43be_8134_8ad71803f1ce" name="a56" value="0"/>
+      <parameter id="mw069921bf_8b42_4390_9566_5a00afab6215" name="a57" value="0"/>
+      <parameter id="mw4c282aa0_3f4e_4710_84fb_5a08b64d4ae9" name="a58" value="0"/>
+      <parameter id="mw449c2a34_108e_4be2_8c7f_b43c77eb4eb1" name="a59" value="0"/>
+      <parameter id="mwf510f274_9d6d_4ca4_b411_fa48216d1f04" name="a60" value="0"/>
+      <parameter id="mwcf844a8b_ab12_42ee_b442_75f9e1390de4" name="a61" value="0"/>
+      <parameter id="mw2f72caba_616f_425f_9030_fb4aaf3c7a99" name="a62" value="0"/>
+      <parameter id="mw9a4ad7c0_ee31_43d2_815a_f9648be50a90" name="a63" value="0"/>
+      <parameter id="mwd6f535e8_4db9_47f8_b522_44c01ce6a11e" name="a64" value="0"/>
+      <parameter id="mw44598a3f_f326_4f14_a159_790aaa3e0b2d" name="a65" value="0"/>
+      <parameter id="mw130ef7b9_cab2_4c67_afa1_e1764e3b173f" name="a66" value="0"/>
+      <parameter id="mw774c4405_bbf7_4a7f_83a8_b76bd4675ca4" name="a67" value="0"/>
+      <parameter id="mwff98e31e_d125_4934_b925_fb897b84254d" name="a68" value="0"/>
+      <parameter id="mw2ed09781_b3bf_48a8_a25a_bded6096bddd" name="a69" value="0"/>
+      <parameter id="mwd0b17ca1_2f0a_4150_bb07_6804bbb98141" name="a70" value="0"/>
+      <parameter id="mwe578bf61_0aae_451d_8df4_d54a4253c069" name="a71" value="0"/>
+      <parameter id="mw8929f3a3_e793_4240_a901_28526879b8d3" name="a72" value="0"/>
+      <parameter id="mw7f2cdf65_8e54_457c_ac65_ec7921844780" name="a73" value="0"/>
+      <parameter id="mw7d08c43c_2194_48ac_b0fd_c5c1c78861ca" name="a74" value="0"/>
+      <parameter id="mw35a88c27_5c2c_4384_8cc6_e40f7d4f527e" name="a75" value="0"/>
+      <parameter id="mwb04ac003_9d70_4064_9533_46f45532b903" name="a76" value="0"/>
+      <parameter id="mwbefcb80b_d651_44af_a0da_4c4c21caa0b2" name="a77" value="0"/>
+      <parameter id="mw5764fd42_008e_4f67_af36_215d162b6cde" name="a78" value="0"/>
+      <parameter id="mw1df79498_743e_4a8d_b7a5_964b9c65bf6f" name="a79" value="0"/>
+      <parameter id="mw8d7d8c2e_66ad_4fff_8be7_8f66aa33b5d4" name="a80" value="0"/>
+      <parameter id="mwefa07131_ee69_4b48_8fb5_417a01eabfd7" name="a81" value="0"/>
+      <parameter id="mw74bad357_653a_4363_a8e6_7064b01d82ef" name="a82" value="0"/>
+      <parameter id="mwfa43e07a_de87_44d2_b4d7_eafef8165c13" name="a83" value="0"/>
+      <parameter id="mwab306c36_7025_4ac3_9468_1248fa11bb3f" name="a84" value="0"/>
+      <parameter id="mw5c3cc4f1_225e_4995_a74a_e96cbc39cd8d" name="a85" value="0"/>
+      <parameter id="mwdcb893f7_29bb_4b25_8d67_d88aa25f5f8b" name="a86" value="0"/>
+      <parameter id="mwa153feca_1721_4126_b949_9617b5b7e1e3" name="a87" value="0"/>
+      <parameter id="mw0b63a928_0e7d_4b84_8199_30418419ca55" name="a88" value="0"/>
+      <parameter id="mw63942228_1be2_43cc_be38_6dd0b4b1dc19" name="a89" value="0"/>
+      <parameter id="mw2b9ae0ad_7cc6_409b_b821_88645b3492fa" name="a90" value="0"/>
+      <parameter id="mw5dadc34e_aa16_491a_ae57_b9d57e48e523" name="a91" value="0"/>
+      <parameter id="mwf354e7f9_a049_43a8_8826_f248d75ed273" name="a92" value="0"/>
+      <parameter id="mw7fd0f64d_6031_4ee6_852a_b81b5adaa1e6" name="a93" value="0"/>
+      <parameter id="mw6fe62bb3_0ca5_4a7e_82c9_6be868b0ef11" name="a94" value="0"/>
+      <parameter id="mw8d8c6baa_bdc6_488a_ba0c_d4369da40947" name="a95" value="0"/>
+      <parameter id="mw946ea7ed_3c98_46bc_99df_84033bdc92ff" name="a96" value="0"/>
+      <parameter id="mwb8b32add_d9c1_4eb3_9327_b26884e2e2e0" name="a97" value="0"/>
+      <parameter id="mw5b732254_663f_4572_aee1_4fdc63dc8246" name="a98" value="0"/>
+      <parameter id="mwd04ccdfc_629d_4d1e_be59_545b951ee3c5" name="a99" value="0"/>
+      <parameter id="mw932d1820_9e5a_400d_8bf4_aac40d2a8d72" name="a100" value="0"/>
+      <parameter id="mw2db49090_1bf6_49cf_a64b_f663b29eeb18" name="a101" value="0"/>
+      <parameter id="mw3679a05c_129f_4f07_80c9_a7c89701eb04" name="a102" value="0"/>
+      <parameter id="mwde348f26_32a6_47b3_bad0_5ccfafedcd52" name="a103" value="0"/>
+      <parameter id="mwf00fe2a1_ce8a_4a03_b647_18b0241d8026" name="a104" value="0"/>
+      <parameter id="mw215bbf64_7332_434b_893e_56b1610c215c" name="a105" value="0"/>
+      <parameter id="mw41094bc3_a23a_4fc1_a247_1198e94081e0" name="a106" value="0"/>
+      <parameter id="mwcb4f6087_0fa2_4098_a75e_9896e6e989e2" name="a107" value="0"/>
+      <parameter id="mw66a34701_33ff_4754_a306_90607792d1ac" name="a108" value="0"/>
+      <parameter id="mw1684d349_94cb_486f_90b7_33f61270a448" name="a109" value="0"/>
+      <parameter id="mw927be75a_ab3c_4e18_b7d6_9a39bec269a5" name="a110" value="0"/>
+      <parameter id="mwc529a960_3879_4d89_b88d_c3ea43572ba0" name="a111" value="0"/>
+      <parameter id="mwc4552384_3dc6_4a91_a713_9e98a6c4d5d2" name="a112" value="0"/>
+      <parameter id="mw6a7034e6_7139_4921_bab9_2d0b5f044582" name="a113" value="0"/>
+      <parameter id="mw2445bf7a_f170_4bac_b382_ef8b1a9dbf7d" name="a114" value="0"/>
+      <parameter id="mw3d883291_0c66_4f57_9128_eed76fa6ebab" name="a115" value="0"/>
+      <parameter id="mw98484b52_7256_4801_a045_0e092de2b5e7" name="a116" value="0"/>
+      <parameter id="mwd0bbd41e_8c34_4ed9_becd_385da45eada7" name="a117" value="0"/>
+      <parameter id="mweae43a35_464f_4c4c_a9e2_79fe87086f9d" name="a118" value="0"/>
+      <parameter id="mw12ab0ad8_45fb_4f97_aa67_1c0fccb1064a" name="a119" value="0"/>
+      <parameter id="mw93869724_9855_4738_9ced_f6e6f782ea07" name="a120" value="0"/>
+      <parameter id="mw9fa1094b_20b4_4d46_b0fc_d70cf31e9817" name="a121" value="0"/>
+      <parameter id="mwdf08247f_059f_4198_a3c3_14fb96ea02f0" name="a122" value="0"/>
+      <parameter id="mw0fa84612_8e53_4f4c_9ddb_bff5a9f56ab1" name="a123" value="0"/>
+      <parameter id="mwc9b4a6d5_719e_4cf3_87b0_31613fa8b0d4" name="a124" value="0"/>
+      <parameter id="mw8643367c_a972_4a3b_9802_51ed43a716e0" name="a125" value="0"/>
+      <parameter id="mwaa2822c5_b794_4fab_922e_ba440d16229a" name="a126" value="0"/>
+      <parameter id="mw8a4c0881_93b6_40aa_ad18_93938a9d39fd" name="a127" value="0"/>
+      <parameter id="mw47aa803e_a62d_4def_9e73_bac8f3985c78" name="a128" value="0"/>
+      <parameter id="mw1df2814c_f915_4a30_bb86_6fed473267bc" name="a129" value="0"/>
+      <parameter id="mw21ba7944_147a_4f6d_a7ad_6409684bae08" name="a130" value="0"/>
+      <parameter id="mw7892602d_6a86_44db_8283_3c8b00d48fa4" name="a131" value="0"/>
+      <parameter id="mw0e3d5bab_69aa_4628_abc1_09203b08b72d" name="a132" value="0"/>
+      <parameter id="mwa2308e2e_332a_405d_abd9_090ea374f0f3" name="a133" value="0"/>
+      <parameter id="mw0ab88ecf_9377_41f5_983d_ee7fe5019e95" name="a134" value="0"/>
+      <parameter id="mw4332c446_15ef_410d_a734_8714d066546f" name="a135" value="0"/>
+      <parameter id="mw65da4e95_a80c_4f24_a50b_3dc53c9b22ca" name="a136" value="0"/>
+      <parameter id="mw4cc93e71_9a4c_46a6_b859_91cca9dcdcbc" name="a137" value="0"/>
+      <parameter id="mw7ba6d0d4_4a2c_4a9d_852d_e89690e2d483" name="a138" value="0"/>
+      <parameter id="mw052fa73d_33a6_4192_a6cb_1d14740a94cb" name="a139" value="0"/>
+      <parameter id="mw17aa3bbe_855b_421f_b0c2_a4aa6db08f57" name="a140" value="0"/>
+      <parameter id="mw7e65b825_2793_4d67_8b59_afa41695a6d6" name="a141" value="0"/>
+      <parameter id="mw1caca9d8_629c_4786_9c21_70e818edff26" name="a142" value="0"/>
+      <parameter id="mw436e3a5d_3cbd_475d_b591_86e57a031b1c" name="a143" value="0"/>
+      <parameter id="mwa1a488c1_8bc4_4d27_af4f_8b0204ec1489" name="a144" value="0"/>
+      <parameter id="mw13120fe6_b4f1_41c2_8116_485223e09a9c" name="a145" value="0"/>
+      <parameter id="mw28362e0d_a9df_4e56_b7bc_e833cbabdd8c" name="a146" value="0"/>
+      <parameter id="mwa3be06c5_5b3d_4a35_bfc3_a80dbe7e1c59" name="a147" value="0"/>
+      <parameter id="mwf6c285d6_f55c_4423_8958_113ef4608b2b" name="a148" value="0"/>
+      <parameter id="mw8de6a580_ffc6_4f0c_95ea_56e91d8fd936" name="a149" value="0"/>
+      <parameter id="mw294cd39d_2134_4051_bfb4_2745e4510917" name="a150" value="0"/>
+      <parameter id="mw8a83f7d3_600a_476a_84d1_8043ee7ea0fa" name="a151" value="0"/>
+      <parameter id="mw68db1f1a_240e_454e_9d5f_95afb22bdd4d" name="a152" value="0"/>
+      <parameter id="mw98be3823_4867_43bb_9569_a723e4d06f59" name="a153" value="0"/>
+      <parameter id="mw7ac464d0_2d09_4b8e_a388_7b5c51d2ed1f" name="a154" value="0"/>
+      <parameter id="mwa457ff48_3b47_4d80_817b_a335d1725220" name="a155" value="0"/>
+      <parameter id="mwe78ceba1_c3b0_4b83_a1c2_aab41176ea15" name="a156" value="0"/>
+      <parameter id="mwddf38f38_017a_4a5f_9c37_24420689dce5" name="a157" value="0"/>
+      <parameter id="mw1cb4cfa7_1b83_4408_9ecb_e0bb29bd912f" name="a158" value="0"/>
+      <parameter id="mwf0b90dd4_64c0_404f_9f1a_4992b4d12c34" name="a159" value="0"/>
+      <parameter id="mw0339c31f_d021_4228_b50f_d73984c6647a" name="a160" value="0"/>
+      <parameter id="mwbe323d2b_9806_4644_9bba_9032be135c92" name="a161" value="0"/>
+      <parameter id="mw03e6673b_c2be_4915_8db9_82601ca57d87" name="a162" value="0"/>
+      <parameter id="mwdbfe82ae_6aca_4cbc_ba19_24b842eb92ab" name="GlcEX" value="1"/>
+      <parameter id="mwc95c3c97_972d_475c_9be2_7b258a06fc5f" name="Vmax1" value="1.17929241877256"/>
+      <parameter id="mw3fbd5620_a3ab_4476_95d8_75ed368a36bc" name="Vmax2" value="5.02130139474752"/>
+      <parameter id="mw3d1aa5f8_1c6c_49bc_8795_35d381d0ab33" name="f6p_" value="0.3092"/>
+      <parameter id="mwfadd8512_fd12_4335_8251_1a44427a3672" name="Km2" value="4.14116672128745"/>
+      <parameter id="mwaa1d35a9_1f4d_42c4_a938_980b95fae94f" name="Vmax3" value="0.120998946636304"/>
+      <parameter id="mwe47d9323_4b3a_4981_8d35_a3020006370c" name="Km3" value="0.0994796306731748"/>
+      <parameter id="mwf13076d4_3f59_471d_a03c_360c8ab577b5" name="fbp_" value="1.2067"/>
+      <parameter id="mw0c8f3e84_0aa7_417b_add4_f30a3f2fc90a" name="Vmax4" value="3.83602189474014"/>
+      <parameter id="mwdcc790e1_9186_4ae3_a121_1596d263555e" name="Km4" value="7.80864011861368"/>
+      <parameter id="mw28ff8d09_a941_4e1c_92f8_52f0f32a1866" name="g6p_" value="1.1417"/>
+      <parameter id="mw52c83577_41a9_43c5_ad71_72f2cf137f1a" name="nadph_" value="0.143683808385056"/>
+      <parameter id="mwc008419d_3332_411c_abb6_9e0b97bf8652" name="Vmax5" value="2.46170113071273"/>
+      <parameter id="mw986986a6_09ea_4057_9818_ed4cbbaadca3" name="Km5" value="4.65279342377209"/>
+      <parameter id="mw7bac7ae6_2aef_4803_b865_a2cbb1e665d5" name="sixpg_" value="0.172"/>
+      <parameter id="mw7b3794ef_c031_4dfc_8dab_29075b2d05ea" name="Vmax6" value="24.4895492527474"/>
+      <parameter id="mw61e8716a_035e_4135_8ac5_5b93315608db" name="Km6" value="43.9091938682351"/>
+      <parameter id="mw6350f85d_0ce2_47d6_be8b_4978f8599ded" name="pep_" value="0.0565"/>
+      <parameter id="mw5fad65cd_bdfd_455e_a7ce_740e5d27c0bd" name="p5p_" value="0.4727"/>
+      <parameter id="mw9781d9a2_da6a_483f_b935_1e6032dbc800" name="Vmax7" value="0.3492510138311"/>
+      <parameter id="mweccd69a9_57fd_4982_bb71_6155839db0f3" name="pyr_" value="1.94412628534517"/>
+      <parameter id="mw873e5e3e_0c22_47df_98e4_25ba21f780cd" name="Km7" value="0.341661338661327"/>
+      <parameter id="mw3ff914ef_0c91_413d_a801_4811e61ae14d" name="Vmax8" value="4.53952346544841"/>
+      <parameter id="mw332a9d04_bce5_413b_b199_aff25da63bfb" name="Km8" value="2.11994686036848"/>
+      <parameter id="mw4d305d41_b8a5_4c96_a5af_24180e5e473e" name="Vmax9" value="7.95495168131172"/>
+      <parameter id="mwa45b50a4_601a_4ba0_a14e_280397cdd746" name="Km9" value="26.9120865644021"/>
+      <parameter id="mw6d6b0ad4_2d67_40dd_ab04_19727e554547" name="Vmax10" value="1.16154859349708"/>
+      <parameter id="mw35648202_0498_4d9a_8f17_4582bc724a92" name="Vmax11" value="0.427032600459081"/>
+      <parameter id="mw7c52d184_88ee_43ff_99db_d48e00ff19dd" name="Vmax12" value="8.88487274844386"/>
+      <parameter id="mw90eb5538_2459_45c9_9904_253b03b96fa8" name="Vmax13" value="8.01823866219243"/>
+      <parameter id="mw73459e0b_f0ce_4120_8171_9e3534b0a9e8" name="dhap_" value="0.5459"/>
+      <parameter id="mwa988daaf_e5c7_4819_9b38_b84f1ae95c2d" name="Vmax14" value="6.24779759598668"/>
+      <parameter id="mw0941b150_33f4_4c5f_b077_df0a87988fe4" name="alpha_ros" value="0.567545354508861"/>
+      <parameter id="mw1cc4fca6_2780_4814_b378_cf1da8a8bb55" name="Vmax15" value="4.50779709366256"/>
+      <parameter id="mw7d47df1e_5a37_44ef_a56c_3ff9862f0d38" name="Vmax16" value="0.22927409135064"/>
+      <parameter id="mw6f89bd5d_4ae9_4416_a5df_1c94a806a127" name="Vmax17" value="0.10388832795846"/>
+      <parameter id="mw4c2182f6_bcd1_4828_9718_f0ec6643bc8d" name="s7p_" value="0.1252"/>
+      <parameter id="mw8b4abd01_0fe3_4e5d_b77f_ee2573bbc2ee" name="Vmax18" value="0.00703110366643034"/>
+      <parameter id="mw7a4874f4_9a71_4f37_9fd8_f56ed0fd9ae6" name="e4p_" value="1.9186172016616"/>
+      <parameter id="mwb679b2c4_80a9_495b_a1a4_d9e1514274f9" name="Vmax19" value="0.000298773845176138"/>
+      <parameter id="mw13080cdb_5746_4798_8b8d_56e4544d951f" name="Vmax20" value="0.129948443595388"/>
+      <parameter id="mwc985e736_ea68_44f8_a92a_7f24e5da0899" name="Vmax21" value="0.00456268020320826"/>
+      <parameter id="mw254d8c25_fc40_4d68_a86c_1fa8851f4848" name="Vmax22" value="0.118653433570926"/>
+      <parameter id="mw2c87f10b_abc0_4a4c_9572_58711f8993de" name="Vmax23" value="0.177980150356389"/>
+      <parameter id="mwc97bce2b_de10_4928_ad82_9d84cdb82372" name="Vmax24" value="0.870968013924006"/>
+      <parameter id="mwb337491d_8099_43d4_869c_c1641dd95912" name="Vmax25" value="0" constant="false"/>
+      <parameter id="mw13294202_5299_41bc_a6b1_dfb24fe80e3e" name="Vmax26" value="0.110329157174284"/>
+      <parameter id="mwfd9791eb_a863_4ccc_bf49_2a2829697089" name="stressFlag" value="0" constant="false"/>
+    </listOfParameters>
+    <listOfReactions>
+      <reaction id="mw8f1cf903_3235_4b66_858c_0637f609e842" name="(PTSg) Glucose uptake" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="mw32ead82e_2dd5_4623_8339_956c412e2dbf"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="mw0d8b580f_28dd_4313_b845_1b4dd772d614"/>
+          <speciesReference species="mw350a69ec_4fc7_42b4_bd66_1829d3c47430"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <divide/>
+              <apply>
+                <times/>
+                <ci> mwc95c3c97_972d_475c_9be2_7b258a06fc5f </ci>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mw0d8b580f_28dd_4313_b845_1b4dd772d614 </ci>
+                    <ci> mw28ff8d09_a941_4e1c_92f8_52f0f32a1866 </ci>
+                  </apply>
+                  <ci> mwc96fb343_ce7c_43f4_a226_ac6927b32315 </ci>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mw53756e03_5880_4b8c_9416_42956bdbe7b0 </ci>
+                    <ci> mwf13076d4_3f59_471d_a03c_360c8ab577b5 </ci>
+                  </apply>
+                  <ci> mwf1354ebc_8146_4313_93f1_c02042dc3841 </ci>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mw0ea93b69_0d95_4cbd_bca1_d01cc1ab2dda </ci>
+                    <ci> mw7bac7ae6_2aef_4803_b865_a2cbb1e665d5 </ci>
+                  </apply>
+                  <ci> mw24d51086_57cd_4ddc_8342_217a053d4573 </ci>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mw32ead82e_2dd5_4623_8339_956c412e2dbf </ci>
+                    <ci> mw6350f85d_0ce2_47d6_be8b_4978f8599ded </ci>
+                  </apply>
+                  <ci> mw710fbef5_3d3e_472e_a9ed_6b1dbc121a33 </ci>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mw350a69ec_4fc7_42b4_bd66_1829d3c47430 </ci>
+                    <ci> mweccd69a9_57fd_4982_bb71_6155839db0f3 </ci>
+                  </apply>
+                  <ci> mwa9aa3bc5_d4bc_4259_ab7a_24abe1da03a2 </ci>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mw1907e7da_a0f9_4416_b24d_385a6ddac18a </ci>
+                    <ci> mw5fad65cd_bdfd_455e_a7ce_740e5d27c0bd </ci>
+                  </apply>
+                  <ci> mwd42471fd_0b75_434f_a9d8_e2604bdc3b1d </ci>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mwded59a15_0067_4f92_9856_92e979b2a8b7 </ci>
+                    <ci> mw7a4874f4_9a71_4f37_9fd8_f56ed0fd9ae6 </ci>
+                  </apply>
+                  <ci> mw5f4cd289_817c_4a22_8e4a_1f3bc8eea437 </ci>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mwec8d1912_a6df_4e98_858d_dc6cea4a391b </ci>
+                    <ci> mw4c2182f6_bcd1_4828_9718_f0ec6643bc8d </ci>
+                  </apply>
+                  <ci> mwd1bce841_e3b7_4aee_8d34_3bf000268c04 </ci>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mweb23c9bc_bb30_4069_bbbc_66793f88544b </ci>
+                    <ci> mw52c83577_41a9_43c5_ad71_72f2cf137f1a </ci>
+                  </apply>
+                  <ci> mw6f634bf8_8a77_4c71_9422_fa93e0534247 </ci>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mw0d8b580f_28dd_4313_b845_1b4dd772d614 </ci>
+                    <ci> mw28ff8d09_a941_4e1c_92f8_52f0f32a1866 </ci>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <cn type="integer"> -1 </cn>
+                    <ci> mwcb3d8164_da74_4dca_9d93_edc0905c7714 </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mw53756e03_5880_4b8c_9416_42956bdbe7b0 </ci>
+                    <ci> mwf13076d4_3f59_471d_a03c_360c8ab577b5 </ci>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <cn type="integer"> -1 </cn>
+                    <ci> mwd967cb01_f038_4a66_945a_2b2f7e4687e6 </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mw0ea93b69_0d95_4cbd_bca1_d01cc1ab2dda </ci>
+                    <ci> mw7bac7ae6_2aef_4803_b865_a2cbb1e665d5 </ci>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <cn type="integer"> -1 </cn>
+                    <ci> mw67c3667c_1075_4759_b1e7_111927263605 </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mw32ead82e_2dd5_4623_8339_956c412e2dbf </ci>
+                    <ci> mw6350f85d_0ce2_47d6_be8b_4978f8599ded </ci>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <cn type="integer"> -1 </cn>
+                    <ci> mw32189a81_73e5_4865_819d_34a7b1bbfc0f </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mw350a69ec_4fc7_42b4_bd66_1829d3c47430 </ci>
+                    <ci> mweccd69a9_57fd_4982_bb71_6155839db0f3 </ci>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <cn type="integer"> -1 </cn>
+                    <ci> mwddf0a6ff_53ae_44df_9ef6_27f0db5e6d43 </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mw1907e7da_a0f9_4416_b24d_385a6ddac18a </ci>
+                    <ci> mw5fad65cd_bdfd_455e_a7ce_740e5d27c0bd </ci>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <cn type="integer"> -1 </cn>
+                    <ci> mw7826bb5a_a8e0_4764_a5c9_b65594761344 </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mwded59a15_0067_4f92_9856_92e979b2a8b7 </ci>
+                    <ci> mw7a4874f4_9a71_4f37_9fd8_f56ed0fd9ae6 </ci>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <cn type="integer"> -1 </cn>
+                    <ci> mwac6a5c11_0be1_4835_83d5_61acd9e065eb </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mwec8d1912_a6df_4e98_858d_dc6cea4a391b </ci>
+                    <ci> mw4c2182f6_bcd1_4828_9718_f0ec6643bc8d </ci>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <cn type="integer"> -1 </cn>
+                    <ci> mw27e1ef1b_c19a_41c1_966c_352528c0e4c5 </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mweb23c9bc_bb30_4069_bbbc_66793f88544b </ci>
+                    <ci> mw52c83577_41a9_43c5_ad71_72f2cf137f1a </ci>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <cn type="integer"> -1 </cn>
+                    <ci> mw1ddef8fe_3092_40c1_901f_e937c02154ed </ci>
+                  </apply>
+                </apply>
+                <ci> mwdbfe82ae_6aca_4cbc_ba19_24b842eb92ab </ci>
+              </apply>
+              <apply>
+                <plus/>
+                <ci> mwdbfe82ae_6aca_4cbc_ba19_24b842eb92ab </ci>
+                <apply>
+                  <divide/>
+                  <cn> 0.22 </cn>
+                  <cn> 27.7 </cn>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="mw6200f9b3_5a0a_41e1_9a75_48d51488dfe5" name="(PFK) F6P to FBP" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="mw7fbddda6_bc46_40e6_830e_16532b8cc5a3"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="mw53756e03_5880_4b8c_9416_42956bdbe7b0"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <divide/>
+              <apply>
+                <times/>
+                <ci> mw3fbd5620_a3ab_4476_95d8_75ed368a36bc </ci>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mw0d8b580f_28dd_4313_b845_1b4dd772d614 </ci>
+                    <ci> mw28ff8d09_a941_4e1c_92f8_52f0f32a1866 </ci>
+                  </apply>
+                  <ci> mw23addafe_9999_4658_b4c0_4e876057e131 </ci>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mw53756e03_5880_4b8c_9416_42956bdbe7b0 </ci>
+                    <ci> mwf13076d4_3f59_471d_a03c_360c8ab577b5 </ci>
+                  </apply>
+                  <ci> mw3937279b_e11b_4c22_8d67_c8b064456d0b </ci>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mw0ea93b69_0d95_4cbd_bca1_d01cc1ab2dda </ci>
+                    <ci> mw7bac7ae6_2aef_4803_b865_a2cbb1e665d5 </ci>
+                  </apply>
+                  <ci> mw0bdc66d0_30d3_4f58_b24f_4461df931ab2 </ci>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mw32ead82e_2dd5_4623_8339_956c412e2dbf </ci>
+                    <ci> mw6350f85d_0ce2_47d6_be8b_4978f8599ded </ci>
+                  </apply>
+                  <ci> mw582a0870_4510_42a4_8a7f_ccc7f5ce8db4 </ci>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mw350a69ec_4fc7_42b4_bd66_1829d3c47430 </ci>
+                    <ci> mweccd69a9_57fd_4982_bb71_6155839db0f3 </ci>
+                  </apply>
+                  <ci> mw3cf10145_3532_4dfb_a953_68648b557921 </ci>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mw1907e7da_a0f9_4416_b24d_385a6ddac18a </ci>
+                    <ci> mw5fad65cd_bdfd_455e_a7ce_740e5d27c0bd </ci>
+                  </apply>
+                  <ci> mwa722c8e7_edda_4487_857d_860003bbfa77 </ci>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mwded59a15_0067_4f92_9856_92e979b2a8b7 </ci>
+                    <ci> mw7a4874f4_9a71_4f37_9fd8_f56ed0fd9ae6 </ci>
+                  </apply>
+                  <ci> mwbc5db00c_6497_4650_947b_a0f06bdf61cd </ci>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mwec8d1912_a6df_4e98_858d_dc6cea4a391b </ci>
+                    <ci> mw4c2182f6_bcd1_4828_9718_f0ec6643bc8d </ci>
+                  </apply>
+                  <ci> mwaf6d17bb_bfc9_4c11_83e6_e2780c747483 </ci>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mweb23c9bc_bb30_4069_bbbc_66793f88544b </ci>
+                    <ci> mw52c83577_41a9_43c5_ad71_72f2cf137f1a </ci>
+                  </apply>
+                  <ci> mw0bb3ae8b_347f_4b6a_8f73_91150c3be3d8 </ci>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mw0d8b580f_28dd_4313_b845_1b4dd772d614 </ci>
+                    <ci> mw28ff8d09_a941_4e1c_92f8_52f0f32a1866 </ci>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <cn type="integer"> -1 </cn>
+                    <ci> mw69bca459_1f74_4462_a2c1_b34ce5f5ded1 </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mw53756e03_5880_4b8c_9416_42956bdbe7b0 </ci>
+                    <ci> mwf13076d4_3f59_471d_a03c_360c8ab577b5 </ci>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <cn type="integer"> -1 </cn>
+                    <ci> mwe6bba030_ef90_45f6_9456_090e3d89de1e </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mw0ea93b69_0d95_4cbd_bca1_d01cc1ab2dda </ci>
+                    <ci> mw7bac7ae6_2aef_4803_b865_a2cbb1e665d5 </ci>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <cn type="integer"> -1 </cn>
+                    <ci> mwbe88a9d3_8374_4fe0_ab62_b137f6b621bc </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mw32ead82e_2dd5_4623_8339_956c412e2dbf </ci>
+                    <ci> mw6350f85d_0ce2_47d6_be8b_4978f8599ded </ci>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <cn type="integer"> -1 </cn>
+                    <ci> mwd8baf224_cc99_4084_af52_f35e235b2af9 </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mw350a69ec_4fc7_42b4_bd66_1829d3c47430 </ci>
+                    <ci> mweccd69a9_57fd_4982_bb71_6155839db0f3 </ci>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <cn type="integer"> -1 </cn>
+                    <ci> mw8e17cfba_1476_4e44_863b_d723e5da5888 </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mw1907e7da_a0f9_4416_b24d_385a6ddac18a </ci>
+                    <ci> mw5fad65cd_bdfd_455e_a7ce_740e5d27c0bd </ci>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <cn type="integer"> -1 </cn>
+                    <ci> mw60308db2_ac6f_4ae3_9389_2f56ab057cb0 </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mwded59a15_0067_4f92_9856_92e979b2a8b7 </ci>
+                    <ci> mw7a4874f4_9a71_4f37_9fd8_f56ed0fd9ae6 </ci>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <cn type="integer"> -1 </cn>
+                    <ci> mwab86662d_3fa3_4673_9faa_242b4b9df25c </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mwec8d1912_a6df_4e98_858d_dc6cea4a391b </ci>
+                    <ci> mw4c2182f6_bcd1_4828_9718_f0ec6643bc8d </ci>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <cn type="integer"> -1 </cn>
+                    <ci> mw813b0479_e780_4aee_8567_a5451aa1755e </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mweb23c9bc_bb30_4069_bbbc_66793f88544b </ci>
+                    <ci> mw52c83577_41a9_43c5_ad71_72f2cf137f1a </ci>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <cn type="integer"> -1 </cn>
+                    <ci> mwb6149946_4c2d_4c02_a66c_21baed8c96ef </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <divide/>
+                  <ci> mw7fbddda6_bc46_40e6_830e_16532b8cc5a3 </ci>
+                  <cn> 0.3092 </cn>
+                </apply>
+              </apply>
+              <apply>
+                <plus/>
+                <apply>
+                  <divide/>
+                  <ci> mw7fbddda6_bc46_40e6_830e_16532b8cc5a3 </ci>
+                  <cn> 0.3092 </cn>
+                </apply>
+                <ci> mwfadd8512_fd12_4335_8251_1a44427a3672 </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="mw105ea6fc_1557_4b62_a66e_2e82461d5421" name="(FBPase) FBP to F6P" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="mw53756e03_5880_4b8c_9416_42956bdbe7b0"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="mw7fbddda6_bc46_40e6_830e_16532b8cc5a3"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <divide/>
+              <apply>
+                <times/>
+                <ci> mwaa1d35a9_1f4d_42c4_a938_980b95fae94f </ci>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mw0d8b580f_28dd_4313_b845_1b4dd772d614 </ci>
+                    <ci> mw28ff8d09_a941_4e1c_92f8_52f0f32a1866 </ci>
+                  </apply>
+                  <ci> mwce6d0583_5423_414e_8e37_174b66abb59c </ci>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mw53756e03_5880_4b8c_9416_42956bdbe7b0 </ci>
+                    <ci> mwf13076d4_3f59_471d_a03c_360c8ab577b5 </ci>
+                  </apply>
+                  <ci> mw3825ed64_cbbc_4bed_a8c5_e8ee1fe98d30 </ci>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mw0ea93b69_0d95_4cbd_bca1_d01cc1ab2dda </ci>
+                    <ci> mw7bac7ae6_2aef_4803_b865_a2cbb1e665d5 </ci>
+                  </apply>
+                  <ci> mw7e45c86b_c7c4_4332_ba38_3788d58e9729 </ci>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mw32ead82e_2dd5_4623_8339_956c412e2dbf </ci>
+                    <ci> mw6350f85d_0ce2_47d6_be8b_4978f8599ded </ci>
+                  </apply>
+                  <ci> mwa1dda961_f687_4d63_8d74_df88acbd8eff </ci>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mw350a69ec_4fc7_42b4_bd66_1829d3c47430 </ci>
+                    <ci> mweccd69a9_57fd_4982_bb71_6155839db0f3 </ci>
+                  </apply>
+                  <ci> mwdd4f25d6_9ac2_42cd_9c62_0bfdd8046555 </ci>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mw1907e7da_a0f9_4416_b24d_385a6ddac18a </ci>
+                    <ci> mw5fad65cd_bdfd_455e_a7ce_740e5d27c0bd </ci>
+                  </apply>
+                  <ci> mw697aca0c_dc72_4efe_ba3d_921a6935803f </ci>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mwded59a15_0067_4f92_9856_92e979b2a8b7 </ci>
+                    <ci> mw7a4874f4_9a71_4f37_9fd8_f56ed0fd9ae6 </ci>
+                  </apply>
+                  <ci> mw571c203f_e4ad_4ea5_9642_bda6bc3ca974 </ci>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mwec8d1912_a6df_4e98_858d_dc6cea4a391b </ci>
+                    <ci> mw4c2182f6_bcd1_4828_9718_f0ec6643bc8d </ci>
+                  </apply>
+                  <ci> mw39b68da3_ddec_46a9_8630_207457a6ddd3 </ci>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mweb23c9bc_bb30_4069_bbbc_66793f88544b </ci>
+                    <ci> mw52c83577_41a9_43c5_ad71_72f2cf137f1a </ci>
+                  </apply>
+                  <ci> mwe2a1c4ef_1159_4ad4_b35d_0edc612236f5 </ci>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mw0d8b580f_28dd_4313_b845_1b4dd772d614 </ci>
+                    <ci> mw28ff8d09_a941_4e1c_92f8_52f0f32a1866 </ci>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <cn type="integer"> -1 </cn>
+                    <ci> mwa682e192_22e5_49f0_b9ce_02dd5c15c315 </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mw53756e03_5880_4b8c_9416_42956bdbe7b0 </ci>
+                    <ci> mwf13076d4_3f59_471d_a03c_360c8ab577b5 </ci>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <cn type="integer"> -1 </cn>
+                    <ci> mwbb4dc183_53ff_4222_8c1b_5da3507d4e5c </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mw0ea93b69_0d95_4cbd_bca1_d01cc1ab2dda </ci>
+                    <ci> mw7bac7ae6_2aef_4803_b865_a2cbb1e665d5 </ci>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <cn type="integer"> -1 </cn>
+                    <ci> mw2f466148_51a0_4e8a_9d21_c14ba6367386 </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mw32ead82e_2dd5_4623_8339_956c412e2dbf </ci>
+                    <ci> mw6350f85d_0ce2_47d6_be8b_4978f8599ded </ci>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <cn type="integer"> -1 </cn>
+                    <ci> mw4e937a0f_01e0_44c6_b054_44545e32ee7e </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mw350a69ec_4fc7_42b4_bd66_1829d3c47430 </ci>
+                    <ci> mweccd69a9_57fd_4982_bb71_6155839db0f3 </ci>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <cn type="integer"> -1 </cn>
+                    <ci> mw523cba3b_b18e_4918_870e_d6585e3e5b64 </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mw1907e7da_a0f9_4416_b24d_385a6ddac18a </ci>
+                    <ci> mw5fad65cd_bdfd_455e_a7ce_740e5d27c0bd </ci>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <cn type="integer"> -1 </cn>
+                    <ci> mw5241a9ee_2f68_4995_984e_4a44802a2cce </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mwded59a15_0067_4f92_9856_92e979b2a8b7 </ci>
+                    <ci> mw7a4874f4_9a71_4f37_9fd8_f56ed0fd9ae6 </ci>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <cn type="integer"> -1 </cn>
+                    <ci> mwfb5185c1_3fb4_4744_837f_c494830cc9cd </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mwec8d1912_a6df_4e98_858d_dc6cea4a391b </ci>
+                    <ci> mw4c2182f6_bcd1_4828_9718_f0ec6643bc8d </ci>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <cn type="integer"> -1 </cn>
+                    <ci> mw6e6b0c90_6d54_495d_9b8a_c7cb4da738e7 </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mweb23c9bc_bb30_4069_bbbc_66793f88544b </ci>
+                    <ci> mw52c83577_41a9_43c5_ad71_72f2cf137f1a </ci>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <cn type="integer"> -1 </cn>
+                    <ci> mwb319216c_a89a_4bea_bb95_8f30544b53a9 </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <divide/>
+                  <ci> mw53756e03_5880_4b8c_9416_42956bdbe7b0 </ci>
+                  <ci> mwf13076d4_3f59_471d_a03c_360c8ab577b5 </ci>
+                </apply>
+              </apply>
+              <apply>
+                <plus/>
+                <apply>
+                  <divide/>
+                  <ci> mw53756e03_5880_4b8c_9416_42956bdbe7b0 </ci>
+                  <ci> mwf13076d4_3f59_471d_a03c_360c8ab577b5 </ci>
+                </apply>
+                <ci> mwe47d9323_4b3a_4981_8d35_a3020006370c </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="mwadaf46c1_6659_4cb7_a3df_818d5d1d3171" name="(G6PDH) G6P to SixPG" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="mw0d8b580f_28dd_4313_b845_1b4dd772d614"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="mw0ea93b69_0d95_4cbd_bca1_d01cc1ab2dda"/>
+          <speciesReference species="mweb23c9bc_bb30_4069_bbbc_66793f88544b"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <divide/>
+              <apply>
+                <times/>
+                <ci> mw0c8f3e84_0aa7_417b_add4_f30a3f2fc90a </ci>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mw0d8b580f_28dd_4313_b845_1b4dd772d614 </ci>
+                    <ci> mw28ff8d09_a941_4e1c_92f8_52f0f32a1866 </ci>
+                  </apply>
+                  <ci> mw1e6cc9db_7271_448d_8e8d_dd3767178964 </ci>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mw53756e03_5880_4b8c_9416_42956bdbe7b0 </ci>
+                    <ci> mwf13076d4_3f59_471d_a03c_360c8ab577b5 </ci>
+                  </apply>
+                  <ci> mwb22b4300_cf5d_43be_8134_8ad71803f1ce </ci>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mw0ea93b69_0d95_4cbd_bca1_d01cc1ab2dda </ci>
+                    <ci> mw7bac7ae6_2aef_4803_b865_a2cbb1e665d5 </ci>
+                  </apply>
+                  <ci> mw069921bf_8b42_4390_9566_5a00afab6215 </ci>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mw32ead82e_2dd5_4623_8339_956c412e2dbf </ci>
+                    <ci> mw6350f85d_0ce2_47d6_be8b_4978f8599ded </ci>
+                  </apply>
+                  <ci> mw4c282aa0_3f4e_4710_84fb_5a08b64d4ae9 </ci>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mw350a69ec_4fc7_42b4_bd66_1829d3c47430 </ci>
+                    <ci> mweccd69a9_57fd_4982_bb71_6155839db0f3 </ci>
+                  </apply>
+                  <ci> mw449c2a34_108e_4be2_8c7f_b43c77eb4eb1 </ci>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mw1907e7da_a0f9_4416_b24d_385a6ddac18a </ci>
+                    <ci> mw5fad65cd_bdfd_455e_a7ce_740e5d27c0bd </ci>
+                  </apply>
+                  <ci> mwf510f274_9d6d_4ca4_b411_fa48216d1f04 </ci>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mwded59a15_0067_4f92_9856_92e979b2a8b7 </ci>
+                    <ci> mw7a4874f4_9a71_4f37_9fd8_f56ed0fd9ae6 </ci>
+                  </apply>
+                  <ci> mwcf844a8b_ab12_42ee_b442_75f9e1390de4 </ci>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mwec8d1912_a6df_4e98_858d_dc6cea4a391b </ci>
+                    <ci> mw4c2182f6_bcd1_4828_9718_f0ec6643bc8d </ci>
+                  </apply>
+                  <ci> mw2f72caba_616f_425f_9030_fb4aaf3c7a99 </ci>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mweb23c9bc_bb30_4069_bbbc_66793f88544b </ci>
+                    <ci> mw52c83577_41a9_43c5_ad71_72f2cf137f1a </ci>
+                  </apply>
+                  <ci> mw9a4ad7c0_ee31_43d2_815a_f9648be50a90 </ci>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mw0d8b580f_28dd_4313_b845_1b4dd772d614 </ci>
+                    <ci> mw28ff8d09_a941_4e1c_92f8_52f0f32a1866 </ci>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <cn type="integer"> -1 </cn>
+                    <ci> mwd6f535e8_4db9_47f8_b522_44c01ce6a11e </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mw53756e03_5880_4b8c_9416_42956bdbe7b0 </ci>
+                    <ci> mwf13076d4_3f59_471d_a03c_360c8ab577b5 </ci>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <cn type="integer"> -1 </cn>
+                    <ci> mw44598a3f_f326_4f14_a159_790aaa3e0b2d </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mw0ea93b69_0d95_4cbd_bca1_d01cc1ab2dda </ci>
+                    <ci> mw7bac7ae6_2aef_4803_b865_a2cbb1e665d5 </ci>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <cn type="integer"> -1 </cn>
+                    <ci> mw130ef7b9_cab2_4c67_afa1_e1764e3b173f </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mw32ead82e_2dd5_4623_8339_956c412e2dbf </ci>
+                    <ci> mw6350f85d_0ce2_47d6_be8b_4978f8599ded </ci>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <cn type="integer"> -1 </cn>
+                    <ci> mw774c4405_bbf7_4a7f_83a8_b76bd4675ca4 </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mw350a69ec_4fc7_42b4_bd66_1829d3c47430 </ci>
+                    <ci> mweccd69a9_57fd_4982_bb71_6155839db0f3 </ci>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <cn type="integer"> -1 </cn>
+                    <ci> mwff98e31e_d125_4934_b925_fb897b84254d </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mw1907e7da_a0f9_4416_b24d_385a6ddac18a </ci>
+                    <ci> mw5fad65cd_bdfd_455e_a7ce_740e5d27c0bd </ci>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <cn type="integer"> -1 </cn>
+                    <ci> mw2ed09781_b3bf_48a8_a25a_bded6096bddd </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mwded59a15_0067_4f92_9856_92e979b2a8b7 </ci>
+                    <ci> mw7a4874f4_9a71_4f37_9fd8_f56ed0fd9ae6 </ci>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <cn type="integer"> -1 </cn>
+                    <ci> mwd0b17ca1_2f0a_4150_bb07_6804bbb98141 </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mwec8d1912_a6df_4e98_858d_dc6cea4a391b </ci>
+                    <ci> mw4c2182f6_bcd1_4828_9718_f0ec6643bc8d </ci>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <cn type="integer"> -1 </cn>
+                    <ci> mwe578bf61_0aae_451d_8df4_d54a4253c069 </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mweb23c9bc_bb30_4069_bbbc_66793f88544b </ci>
+                    <ci> mw52c83577_41a9_43c5_ad71_72f2cf137f1a </ci>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <cn type="integer"> -1 </cn>
+                    <ci> mw8929f3a3_e793_4240_a901_28526879b8d3 </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <divide/>
+                  <ci> mw0d8b580f_28dd_4313_b845_1b4dd772d614 </ci>
+                  <ci> mw28ff8d09_a941_4e1c_92f8_52f0f32a1866 </ci>
+                </apply>
+              </apply>
+              <apply>
+                <plus/>
+                <apply>
+                  <divide/>
+                  <ci> mw0d8b580f_28dd_4313_b845_1b4dd772d614 </ci>
+                  <ci> mw28ff8d09_a941_4e1c_92f8_52f0f32a1866 </ci>
+                </apply>
+                <ci> mwdcc790e1_9186_4ae3_a121_1596d263555e </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="mw920002b8_e473_4b2c_a646_c6c9911704d4" name="(GND) 6PG to P5P" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="mw0ea93b69_0d95_4cbd_bca1_d01cc1ab2dda"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="mw1907e7da_a0f9_4416_b24d_385a6ddac18a"/>
+          <speciesReference species="mweb23c9bc_bb30_4069_bbbc_66793f88544b"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <divide/>
+              <apply>
+                <times/>
+                <ci> mwc008419d_3332_411c_abb6_9e0b97bf8652 </ci>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mw0d8b580f_28dd_4313_b845_1b4dd772d614 </ci>
+                    <ci> mw28ff8d09_a941_4e1c_92f8_52f0f32a1866 </ci>
+                  </apply>
+                  <ci> mw7f2cdf65_8e54_457c_ac65_ec7921844780 </ci>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mw53756e03_5880_4b8c_9416_42956bdbe7b0 </ci>
+                    <ci> mwf13076d4_3f59_471d_a03c_360c8ab577b5 </ci>
+                  </apply>
+                  <ci> mw7d08c43c_2194_48ac_b0fd_c5c1c78861ca </ci>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mw0ea93b69_0d95_4cbd_bca1_d01cc1ab2dda </ci>
+                    <ci> mw7bac7ae6_2aef_4803_b865_a2cbb1e665d5 </ci>
+                  </apply>
+                  <ci> mw35a88c27_5c2c_4384_8cc6_e40f7d4f527e </ci>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mw32ead82e_2dd5_4623_8339_956c412e2dbf </ci>
+                    <ci> mw6350f85d_0ce2_47d6_be8b_4978f8599ded </ci>
+                  </apply>
+                  <ci> mwb04ac003_9d70_4064_9533_46f45532b903 </ci>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mw350a69ec_4fc7_42b4_bd66_1829d3c47430 </ci>
+                    <ci> mweccd69a9_57fd_4982_bb71_6155839db0f3 </ci>
+                  </apply>
+                  <ci> mwbefcb80b_d651_44af_a0da_4c4c21caa0b2 </ci>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mw1907e7da_a0f9_4416_b24d_385a6ddac18a </ci>
+                    <ci> mw5fad65cd_bdfd_455e_a7ce_740e5d27c0bd </ci>
+                  </apply>
+                  <ci> mw5764fd42_008e_4f67_af36_215d162b6cde </ci>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mwded59a15_0067_4f92_9856_92e979b2a8b7 </ci>
+                    <ci> mw7a4874f4_9a71_4f37_9fd8_f56ed0fd9ae6 </ci>
+                  </apply>
+                  <ci> mw1df79498_743e_4a8d_b7a5_964b9c65bf6f </ci>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mwec8d1912_a6df_4e98_858d_dc6cea4a391b </ci>
+                    <ci> mw4c2182f6_bcd1_4828_9718_f0ec6643bc8d </ci>
+                  </apply>
+                  <ci> mw8d7d8c2e_66ad_4fff_8be7_8f66aa33b5d4 </ci>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mweb23c9bc_bb30_4069_bbbc_66793f88544b </ci>
+                    <ci> mw52c83577_41a9_43c5_ad71_72f2cf137f1a </ci>
+                  </apply>
+                  <ci> mwefa07131_ee69_4b48_8fb5_417a01eabfd7 </ci>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mw0d8b580f_28dd_4313_b845_1b4dd772d614 </ci>
+                    <ci> mw28ff8d09_a941_4e1c_92f8_52f0f32a1866 </ci>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <cn type="integer"> -1 </cn>
+                    <ci> mw74bad357_653a_4363_a8e6_7064b01d82ef </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mw53756e03_5880_4b8c_9416_42956bdbe7b0 </ci>
+                    <ci> mwf13076d4_3f59_471d_a03c_360c8ab577b5 </ci>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <cn type="integer"> -1 </cn>
+                    <ci> mwfa43e07a_de87_44d2_b4d7_eafef8165c13 </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mw0ea93b69_0d95_4cbd_bca1_d01cc1ab2dda </ci>
+                    <ci> mw7bac7ae6_2aef_4803_b865_a2cbb1e665d5 </ci>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <cn type="integer"> -1 </cn>
+                    <ci> mwab306c36_7025_4ac3_9468_1248fa11bb3f </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mw32ead82e_2dd5_4623_8339_956c412e2dbf </ci>
+                    <ci> mw6350f85d_0ce2_47d6_be8b_4978f8599ded </ci>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <cn type="integer"> -1 </cn>
+                    <ci> mw5c3cc4f1_225e_4995_a74a_e96cbc39cd8d </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mw350a69ec_4fc7_42b4_bd66_1829d3c47430 </ci>
+                    <ci> mweccd69a9_57fd_4982_bb71_6155839db0f3 </ci>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <cn type="integer"> -1 </cn>
+                    <ci> mwdcb893f7_29bb_4b25_8d67_d88aa25f5f8b </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mw1907e7da_a0f9_4416_b24d_385a6ddac18a </ci>
+                    <ci> mw5fad65cd_bdfd_455e_a7ce_740e5d27c0bd </ci>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <cn type="integer"> -1 </cn>
+                    <ci> mwa153feca_1721_4126_b949_9617b5b7e1e3 </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mwded59a15_0067_4f92_9856_92e979b2a8b7 </ci>
+                    <ci> mw7a4874f4_9a71_4f37_9fd8_f56ed0fd9ae6 </ci>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <cn type="integer"> -1 </cn>
+                    <ci> mw0b63a928_0e7d_4b84_8199_30418419ca55 </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mwec8d1912_a6df_4e98_858d_dc6cea4a391b </ci>
+                    <ci> mw4c2182f6_bcd1_4828_9718_f0ec6643bc8d </ci>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <cn type="integer"> -1 </cn>
+                    <ci> mw63942228_1be2_43cc_be38_6dd0b4b1dc19 </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mweb23c9bc_bb30_4069_bbbc_66793f88544b </ci>
+                    <ci> mw52c83577_41a9_43c5_ad71_72f2cf137f1a </ci>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <cn type="integer"> -1 </cn>
+                    <ci> mw2b9ae0ad_7cc6_409b_b821_88645b3492fa </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <divide/>
+                  <ci> mw0ea93b69_0d95_4cbd_bca1_d01cc1ab2dda </ci>
+                  <ci> mw7bac7ae6_2aef_4803_b865_a2cbb1e665d5 </ci>
+                </apply>
+              </apply>
+              <apply>
+                <plus/>
+                <apply>
+                  <divide/>
+                  <ci> mw0ea93b69_0d95_4cbd_bca1_d01cc1ab2dda </ci>
+                  <ci> mw7bac7ae6_2aef_4803_b865_a2cbb1e665d5 </ci>
+                </apply>
+                <ci> mw986986a6_09ea_4057_9818_ed4cbbaadca3 </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="mw34a098b9_ed45_4f25_8844_7b6b497ddcb6" name="(PYK) PEP to PYR" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="mw32ead82e_2dd5_4623_8339_956c412e2dbf"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="mw350a69ec_4fc7_42b4_bd66_1829d3c47430"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <divide/>
+              <apply>
+                <times/>
+                <ci> mw7b3794ef_c031_4dfc_8dab_29075b2d05ea </ci>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mw0d8b580f_28dd_4313_b845_1b4dd772d614 </ci>
+                    <ci> mw28ff8d09_a941_4e1c_92f8_52f0f32a1866 </ci>
+                  </apply>
+                  <ci> mw5dadc34e_aa16_491a_ae57_b9d57e48e523 </ci>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mw53756e03_5880_4b8c_9416_42956bdbe7b0 </ci>
+                    <ci> mwf13076d4_3f59_471d_a03c_360c8ab577b5 </ci>
+                  </apply>
+                  <ci> mwf354e7f9_a049_43a8_8826_f248d75ed273 </ci>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mw0ea93b69_0d95_4cbd_bca1_d01cc1ab2dda </ci>
+                    <ci> mw7bac7ae6_2aef_4803_b865_a2cbb1e665d5 </ci>
+                  </apply>
+                  <ci> mw7fd0f64d_6031_4ee6_852a_b81b5adaa1e6 </ci>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mw32ead82e_2dd5_4623_8339_956c412e2dbf </ci>
+                    <ci> mw6350f85d_0ce2_47d6_be8b_4978f8599ded </ci>
+                  </apply>
+                  <ci> mw6fe62bb3_0ca5_4a7e_82c9_6be868b0ef11 </ci>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mw350a69ec_4fc7_42b4_bd66_1829d3c47430 </ci>
+                    <ci> mweccd69a9_57fd_4982_bb71_6155839db0f3 </ci>
+                  </apply>
+                  <ci> mw8d8c6baa_bdc6_488a_ba0c_d4369da40947 </ci>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mw1907e7da_a0f9_4416_b24d_385a6ddac18a </ci>
+                    <ci> mw5fad65cd_bdfd_455e_a7ce_740e5d27c0bd </ci>
+                  </apply>
+                  <ci> mw946ea7ed_3c98_46bc_99df_84033bdc92ff </ci>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mwded59a15_0067_4f92_9856_92e979b2a8b7 </ci>
+                    <ci> mw7a4874f4_9a71_4f37_9fd8_f56ed0fd9ae6 </ci>
+                  </apply>
+                  <ci> mwb8b32add_d9c1_4eb3_9327_b26884e2e2e0 </ci>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mwec8d1912_a6df_4e98_858d_dc6cea4a391b </ci>
+                    <ci> mw4c2182f6_bcd1_4828_9718_f0ec6643bc8d </ci>
+                  </apply>
+                  <ci> mw5b732254_663f_4572_aee1_4fdc63dc8246 </ci>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mweb23c9bc_bb30_4069_bbbc_66793f88544b </ci>
+                    <ci> mw52c83577_41a9_43c5_ad71_72f2cf137f1a </ci>
+                  </apply>
+                  <ci> mwd04ccdfc_629d_4d1e_be59_545b951ee3c5 </ci>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mw0d8b580f_28dd_4313_b845_1b4dd772d614 </ci>
+                    <ci> mw28ff8d09_a941_4e1c_92f8_52f0f32a1866 </ci>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <cn type="integer"> -1 </cn>
+                    <ci> mw932d1820_9e5a_400d_8bf4_aac40d2a8d72 </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mw53756e03_5880_4b8c_9416_42956bdbe7b0 </ci>
+                    <ci> mwf13076d4_3f59_471d_a03c_360c8ab577b5 </ci>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <cn type="integer"> -1 </cn>
+                    <ci> mw2db49090_1bf6_49cf_a64b_f663b29eeb18 </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mw0ea93b69_0d95_4cbd_bca1_d01cc1ab2dda </ci>
+                    <ci> mw7bac7ae6_2aef_4803_b865_a2cbb1e665d5 </ci>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <cn type="integer"> -1 </cn>
+                    <ci> mw3679a05c_129f_4f07_80c9_a7c89701eb04 </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mw32ead82e_2dd5_4623_8339_956c412e2dbf </ci>
+                    <ci> mw6350f85d_0ce2_47d6_be8b_4978f8599ded </ci>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <cn type="integer"> -1 </cn>
+                    <ci> mwde348f26_32a6_47b3_bad0_5ccfafedcd52 </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mw350a69ec_4fc7_42b4_bd66_1829d3c47430 </ci>
+                    <ci> mweccd69a9_57fd_4982_bb71_6155839db0f3 </ci>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <cn type="integer"> -1 </cn>
+                    <ci> mwf00fe2a1_ce8a_4a03_b647_18b0241d8026 </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mw1907e7da_a0f9_4416_b24d_385a6ddac18a </ci>
+                    <ci> mw5fad65cd_bdfd_455e_a7ce_740e5d27c0bd </ci>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <cn type="integer"> -1 </cn>
+                    <ci> mw215bbf64_7332_434b_893e_56b1610c215c </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mwded59a15_0067_4f92_9856_92e979b2a8b7 </ci>
+                    <ci> mw7a4874f4_9a71_4f37_9fd8_f56ed0fd9ae6 </ci>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <cn type="integer"> -1 </cn>
+                    <ci> mw41094bc3_a23a_4fc1_a247_1198e94081e0 </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mwec8d1912_a6df_4e98_858d_dc6cea4a391b </ci>
+                    <ci> mw4c2182f6_bcd1_4828_9718_f0ec6643bc8d </ci>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <cn type="integer"> -1 </cn>
+                    <ci> mwcb4f6087_0fa2_4098_a75e_9896e6e989e2 </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mweb23c9bc_bb30_4069_bbbc_66793f88544b </ci>
+                    <ci> mw52c83577_41a9_43c5_ad71_72f2cf137f1a </ci>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <cn type="integer"> -1 </cn>
+                    <ci> mw66a34701_33ff_4754_a306_90607792d1ac </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <divide/>
+                  <ci> mw32ead82e_2dd5_4623_8339_956c412e2dbf </ci>
+                  <ci> mw6350f85d_0ce2_47d6_be8b_4978f8599ded </ci>
+                </apply>
+              </apply>
+              <apply>
+                <plus/>
+                <apply>
+                  <divide/>
+                  <ci> mw32ead82e_2dd5_4623_8339_956c412e2dbf </ci>
+                  <ci> mw6350f85d_0ce2_47d6_be8b_4978f8599ded </ci>
+                </apply>
+                <ci> mw61e8716a_035e_4135_8ac5_5b93315608db </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="mw6ed87325_4bdf_47c5_b683_3eda146f4887" name="(PPS) PYR to PEP" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="mw350a69ec_4fc7_42b4_bd66_1829d3c47430"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="mw32ead82e_2dd5_4623_8339_956c412e2dbf"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <divide/>
+              <apply>
+                <times/>
+                <ci> mw9781d9a2_da6a_483f_b935_1e6032dbc800 </ci>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mw0d8b580f_28dd_4313_b845_1b4dd772d614 </ci>
+                    <ci> mw28ff8d09_a941_4e1c_92f8_52f0f32a1866 </ci>
+                  </apply>
+                  <ci> mw1684d349_94cb_486f_90b7_33f61270a448 </ci>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mw53756e03_5880_4b8c_9416_42956bdbe7b0 </ci>
+                    <ci> mwf13076d4_3f59_471d_a03c_360c8ab577b5 </ci>
+                  </apply>
+                  <ci> mw927be75a_ab3c_4e18_b7d6_9a39bec269a5 </ci>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mw0ea93b69_0d95_4cbd_bca1_d01cc1ab2dda </ci>
+                    <ci> mw7bac7ae6_2aef_4803_b865_a2cbb1e665d5 </ci>
+                  </apply>
+                  <ci> mwc529a960_3879_4d89_b88d_c3ea43572ba0 </ci>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mw32ead82e_2dd5_4623_8339_956c412e2dbf </ci>
+                    <ci> mw6350f85d_0ce2_47d6_be8b_4978f8599ded </ci>
+                  </apply>
+                  <ci> mwc4552384_3dc6_4a91_a713_9e98a6c4d5d2 </ci>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mw350a69ec_4fc7_42b4_bd66_1829d3c47430 </ci>
+                    <ci> mweccd69a9_57fd_4982_bb71_6155839db0f3 </ci>
+                  </apply>
+                  <ci> mw6a7034e6_7139_4921_bab9_2d0b5f044582 </ci>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mw1907e7da_a0f9_4416_b24d_385a6ddac18a </ci>
+                    <ci> mw5fad65cd_bdfd_455e_a7ce_740e5d27c0bd </ci>
+                  </apply>
+                  <ci> mw2445bf7a_f170_4bac_b382_ef8b1a9dbf7d </ci>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mwded59a15_0067_4f92_9856_92e979b2a8b7 </ci>
+                    <ci> mw7a4874f4_9a71_4f37_9fd8_f56ed0fd9ae6 </ci>
+                  </apply>
+                  <ci> mw3d883291_0c66_4f57_9128_eed76fa6ebab </ci>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mwec8d1912_a6df_4e98_858d_dc6cea4a391b </ci>
+                    <ci> mw4c2182f6_bcd1_4828_9718_f0ec6643bc8d </ci>
+                  </apply>
+                  <ci> mw98484b52_7256_4801_a045_0e092de2b5e7 </ci>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mweb23c9bc_bb30_4069_bbbc_66793f88544b </ci>
+                    <ci> mw52c83577_41a9_43c5_ad71_72f2cf137f1a </ci>
+                  </apply>
+                  <ci> mwd0bbd41e_8c34_4ed9_becd_385da45eada7 </ci>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mw0d8b580f_28dd_4313_b845_1b4dd772d614 </ci>
+                    <ci> mw28ff8d09_a941_4e1c_92f8_52f0f32a1866 </ci>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <cn type="integer"> -1 </cn>
+                    <ci> mweae43a35_464f_4c4c_a9e2_79fe87086f9d </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mw53756e03_5880_4b8c_9416_42956bdbe7b0 </ci>
+                    <ci> mwf13076d4_3f59_471d_a03c_360c8ab577b5 </ci>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <cn type="integer"> -1 </cn>
+                    <ci> mw12ab0ad8_45fb_4f97_aa67_1c0fccb1064a </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mw0ea93b69_0d95_4cbd_bca1_d01cc1ab2dda </ci>
+                    <ci> mw7bac7ae6_2aef_4803_b865_a2cbb1e665d5 </ci>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <cn type="integer"> -1 </cn>
+                    <ci> mw93869724_9855_4738_9ced_f6e6f782ea07 </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mw32ead82e_2dd5_4623_8339_956c412e2dbf </ci>
+                    <ci> mw6350f85d_0ce2_47d6_be8b_4978f8599ded </ci>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <cn type="integer"> -1 </cn>
+                    <ci> mw9fa1094b_20b4_4d46_b0fc_d70cf31e9817 </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mw350a69ec_4fc7_42b4_bd66_1829d3c47430 </ci>
+                    <ci> mweccd69a9_57fd_4982_bb71_6155839db0f3 </ci>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <cn type="integer"> -1 </cn>
+                    <ci> mwdf08247f_059f_4198_a3c3_14fb96ea02f0 </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mw1907e7da_a0f9_4416_b24d_385a6ddac18a </ci>
+                    <ci> mw5fad65cd_bdfd_455e_a7ce_740e5d27c0bd </ci>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <cn type="integer"> -1 </cn>
+                    <ci> mw0fa84612_8e53_4f4c_9ddb_bff5a9f56ab1 </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mwded59a15_0067_4f92_9856_92e979b2a8b7 </ci>
+                    <ci> mw7a4874f4_9a71_4f37_9fd8_f56ed0fd9ae6 </ci>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <cn type="integer"> -1 </cn>
+                    <ci> mwc9b4a6d5_719e_4cf3_87b0_31613fa8b0d4 </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mwec8d1912_a6df_4e98_858d_dc6cea4a391b </ci>
+                    <ci> mw4c2182f6_bcd1_4828_9718_f0ec6643bc8d </ci>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <cn type="integer"> -1 </cn>
+                    <ci> mw8643367c_a972_4a3b_9802_51ed43a716e0 </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mweb23c9bc_bb30_4069_bbbc_66793f88544b </ci>
+                    <ci> mw52c83577_41a9_43c5_ad71_72f2cf137f1a </ci>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <cn type="integer"> -1 </cn>
+                    <ci> mwaa2822c5_b794_4fab_922e_ba440d16229a </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <divide/>
+                  <ci> mw350a69ec_4fc7_42b4_bd66_1829d3c47430 </ci>
+                  <ci> mweccd69a9_57fd_4982_bb71_6155839db0f3 </ci>
+                </apply>
+              </apply>
+              <apply>
+                <plus/>
+                <apply>
+                  <divide/>
+                  <ci> mw350a69ec_4fc7_42b4_bd66_1829d3c47430 </ci>
+                  <ci> mweccd69a9_57fd_4982_bb71_6155839db0f3 </ci>
+                </apply>
+                <ci> mw873e5e3e_0c22_47df_98e4_25ba21f780cd </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="mwb04ead8c_ef93_4cb2_99f6_f9a2663f94fe" name="(PDH) Pyr to null" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="mw350a69ec_4fc7_42b4_bd66_1829d3c47430"/>
+        </listOfReactants>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <divide/>
+              <apply>
+                <times/>
+                <ci> mw3ff914ef_0c91_413d_a801_4811e61ae14d </ci>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mw0d8b580f_28dd_4313_b845_1b4dd772d614 </ci>
+                    <ci> mw28ff8d09_a941_4e1c_92f8_52f0f32a1866 </ci>
+                  </apply>
+                  <ci> mw8a4c0881_93b6_40aa_ad18_93938a9d39fd </ci>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mw53756e03_5880_4b8c_9416_42956bdbe7b0 </ci>
+                    <ci> mwf13076d4_3f59_471d_a03c_360c8ab577b5 </ci>
+                  </apply>
+                  <ci> mw47aa803e_a62d_4def_9e73_bac8f3985c78 </ci>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mw0ea93b69_0d95_4cbd_bca1_d01cc1ab2dda </ci>
+                    <ci> mw7bac7ae6_2aef_4803_b865_a2cbb1e665d5 </ci>
+                  </apply>
+                  <ci> mw1df2814c_f915_4a30_bb86_6fed473267bc </ci>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mw32ead82e_2dd5_4623_8339_956c412e2dbf </ci>
+                    <ci> mw6350f85d_0ce2_47d6_be8b_4978f8599ded </ci>
+                  </apply>
+                  <ci> mw21ba7944_147a_4f6d_a7ad_6409684bae08 </ci>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mw350a69ec_4fc7_42b4_bd66_1829d3c47430 </ci>
+                    <ci> mweccd69a9_57fd_4982_bb71_6155839db0f3 </ci>
+                  </apply>
+                  <ci> mw7892602d_6a86_44db_8283_3c8b00d48fa4 </ci>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mw1907e7da_a0f9_4416_b24d_385a6ddac18a </ci>
+                    <ci> mw5fad65cd_bdfd_455e_a7ce_740e5d27c0bd </ci>
+                  </apply>
+                  <ci> mw0e3d5bab_69aa_4628_abc1_09203b08b72d </ci>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mwded59a15_0067_4f92_9856_92e979b2a8b7 </ci>
+                    <ci> mw7a4874f4_9a71_4f37_9fd8_f56ed0fd9ae6 </ci>
+                  </apply>
+                  <ci> mwa2308e2e_332a_405d_abd9_090ea374f0f3 </ci>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mwec8d1912_a6df_4e98_858d_dc6cea4a391b </ci>
+                    <ci> mw4c2182f6_bcd1_4828_9718_f0ec6643bc8d </ci>
+                  </apply>
+                  <ci> mw0ab88ecf_9377_41f5_983d_ee7fe5019e95 </ci>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mweb23c9bc_bb30_4069_bbbc_66793f88544b </ci>
+                    <ci> mw52c83577_41a9_43c5_ad71_72f2cf137f1a </ci>
+                  </apply>
+                  <ci> mw4332c446_15ef_410d_a734_8714d066546f </ci>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mw0d8b580f_28dd_4313_b845_1b4dd772d614 </ci>
+                    <ci> mw28ff8d09_a941_4e1c_92f8_52f0f32a1866 </ci>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <cn type="integer"> -1 </cn>
+                    <ci> mw65da4e95_a80c_4f24_a50b_3dc53c9b22ca </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mw53756e03_5880_4b8c_9416_42956bdbe7b0 </ci>
+                    <ci> mwf13076d4_3f59_471d_a03c_360c8ab577b5 </ci>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <cn type="integer"> -1 </cn>
+                    <ci> mw4cc93e71_9a4c_46a6_b859_91cca9dcdcbc </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mw0ea93b69_0d95_4cbd_bca1_d01cc1ab2dda </ci>
+                    <ci> mw7bac7ae6_2aef_4803_b865_a2cbb1e665d5 </ci>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <cn type="integer"> -1 </cn>
+                    <ci> mw7ba6d0d4_4a2c_4a9d_852d_e89690e2d483 </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mw32ead82e_2dd5_4623_8339_956c412e2dbf </ci>
+                    <ci> mw6350f85d_0ce2_47d6_be8b_4978f8599ded </ci>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <cn type="integer"> -1 </cn>
+                    <ci> mw052fa73d_33a6_4192_a6cb_1d14740a94cb </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mw350a69ec_4fc7_42b4_bd66_1829d3c47430 </ci>
+                    <ci> mweccd69a9_57fd_4982_bb71_6155839db0f3 </ci>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <cn type="integer"> -1 </cn>
+                    <ci> mw17aa3bbe_855b_421f_b0c2_a4aa6db08f57 </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mw1907e7da_a0f9_4416_b24d_385a6ddac18a </ci>
+                    <ci> mw5fad65cd_bdfd_455e_a7ce_740e5d27c0bd </ci>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <cn type="integer"> -1 </cn>
+                    <ci> mw7e65b825_2793_4d67_8b59_afa41695a6d6 </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mwded59a15_0067_4f92_9856_92e979b2a8b7 </ci>
+                    <ci> mw7a4874f4_9a71_4f37_9fd8_f56ed0fd9ae6 </ci>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <cn type="integer"> -1 </cn>
+                    <ci> mw1caca9d8_629c_4786_9c21_70e818edff26 </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mwec8d1912_a6df_4e98_858d_dc6cea4a391b </ci>
+                    <ci> mw4c2182f6_bcd1_4828_9718_f0ec6643bc8d </ci>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <cn type="integer"> -1 </cn>
+                    <ci> mw436e3a5d_3cbd_475d_b591_86e57a031b1c </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mweb23c9bc_bb30_4069_bbbc_66793f88544b </ci>
+                    <ci> mw52c83577_41a9_43c5_ad71_72f2cf137f1a </ci>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <cn type="integer"> -1 </cn>
+                    <ci> mwa1a488c1_8bc4_4d27_af4f_8b0204ec1489 </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <divide/>
+                  <ci> mw350a69ec_4fc7_42b4_bd66_1829d3c47430 </ci>
+                  <ci> mweccd69a9_57fd_4982_bb71_6155839db0f3 </ci>
+                </apply>
+              </apply>
+              <apply>
+                <plus/>
+                <apply>
+                  <divide/>
+                  <ci> mw350a69ec_4fc7_42b4_bd66_1829d3c47430 </ci>
+                  <ci> mweccd69a9_57fd_4982_bb71_6155839db0f3 </ci>
+                </apply>
+                <ci> mw332a9d04_bce5_413b_b199_aff25da63bfb </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="mw42d705bf_96f7_4e12_8897_7bfef606ffba" name="(PPC) PEP to null" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="mw32ead82e_2dd5_4623_8339_956c412e2dbf"/>
+        </listOfReactants>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <divide/>
+              <apply>
+                <times/>
+                <ci> mw4d305d41_b8a5_4c96_a5af_24180e5e473e </ci>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mw0d8b580f_28dd_4313_b845_1b4dd772d614 </ci>
+                    <ci> mw28ff8d09_a941_4e1c_92f8_52f0f32a1866 </ci>
+                  </apply>
+                  <ci> mw13120fe6_b4f1_41c2_8116_485223e09a9c </ci>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mw53756e03_5880_4b8c_9416_42956bdbe7b0 </ci>
+                    <ci> mwf13076d4_3f59_471d_a03c_360c8ab577b5 </ci>
+                  </apply>
+                  <ci> mw28362e0d_a9df_4e56_b7bc_e833cbabdd8c </ci>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mw0ea93b69_0d95_4cbd_bca1_d01cc1ab2dda </ci>
+                    <ci> mw7bac7ae6_2aef_4803_b865_a2cbb1e665d5 </ci>
+                  </apply>
+                  <ci> mwa3be06c5_5b3d_4a35_bfc3_a80dbe7e1c59 </ci>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mw32ead82e_2dd5_4623_8339_956c412e2dbf </ci>
+                    <ci> mw6350f85d_0ce2_47d6_be8b_4978f8599ded </ci>
+                  </apply>
+                  <ci> mwf6c285d6_f55c_4423_8958_113ef4608b2b </ci>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mw350a69ec_4fc7_42b4_bd66_1829d3c47430 </ci>
+                    <ci> mweccd69a9_57fd_4982_bb71_6155839db0f3 </ci>
+                  </apply>
+                  <ci> mw8de6a580_ffc6_4f0c_95ea_56e91d8fd936 </ci>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mw1907e7da_a0f9_4416_b24d_385a6ddac18a </ci>
+                    <ci> mw5fad65cd_bdfd_455e_a7ce_740e5d27c0bd </ci>
+                  </apply>
+                  <ci> mw294cd39d_2134_4051_bfb4_2745e4510917 </ci>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mwded59a15_0067_4f92_9856_92e979b2a8b7 </ci>
+                    <ci> mw7a4874f4_9a71_4f37_9fd8_f56ed0fd9ae6 </ci>
+                  </apply>
+                  <ci> mw8a83f7d3_600a_476a_84d1_8043ee7ea0fa </ci>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mwec8d1912_a6df_4e98_858d_dc6cea4a391b </ci>
+                    <ci> mw4c2182f6_bcd1_4828_9718_f0ec6643bc8d </ci>
+                  </apply>
+                  <ci> mw68db1f1a_240e_454e_9d5f_95afb22bdd4d </ci>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mweb23c9bc_bb30_4069_bbbc_66793f88544b </ci>
+                    <ci> mw52c83577_41a9_43c5_ad71_72f2cf137f1a </ci>
+                  </apply>
+                  <ci> mw98be3823_4867_43bb_9569_a723e4d06f59 </ci>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mw0d8b580f_28dd_4313_b845_1b4dd772d614 </ci>
+                    <ci> mw28ff8d09_a941_4e1c_92f8_52f0f32a1866 </ci>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <cn type="integer"> -1 </cn>
+                    <ci> mw7ac464d0_2d09_4b8e_a388_7b5c51d2ed1f </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mw53756e03_5880_4b8c_9416_42956bdbe7b0 </ci>
+                    <ci> mwf13076d4_3f59_471d_a03c_360c8ab577b5 </ci>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <cn type="integer"> -1 </cn>
+                    <ci> mwa457ff48_3b47_4d80_817b_a335d1725220 </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mw0ea93b69_0d95_4cbd_bca1_d01cc1ab2dda </ci>
+                    <ci> mw7bac7ae6_2aef_4803_b865_a2cbb1e665d5 </ci>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <cn type="integer"> -1 </cn>
+                    <ci> mwe78ceba1_c3b0_4b83_a1c2_aab41176ea15 </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mw32ead82e_2dd5_4623_8339_956c412e2dbf </ci>
+                    <ci> mw6350f85d_0ce2_47d6_be8b_4978f8599ded </ci>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <cn type="integer"> -1 </cn>
+                    <ci> mwddf38f38_017a_4a5f_9c37_24420689dce5 </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mw350a69ec_4fc7_42b4_bd66_1829d3c47430 </ci>
+                    <ci> mweccd69a9_57fd_4982_bb71_6155839db0f3 </ci>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <cn type="integer"> -1 </cn>
+                    <ci> mw1cb4cfa7_1b83_4408_9ecb_e0bb29bd912f </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mw1907e7da_a0f9_4416_b24d_385a6ddac18a </ci>
+                    <ci> mw5fad65cd_bdfd_455e_a7ce_740e5d27c0bd </ci>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <cn type="integer"> -1 </cn>
+                    <ci> mwf0b90dd4_64c0_404f_9f1a_4992b4d12c34 </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mwded59a15_0067_4f92_9856_92e979b2a8b7 </ci>
+                    <ci> mw7a4874f4_9a71_4f37_9fd8_f56ed0fd9ae6 </ci>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <cn type="integer"> -1 </cn>
+                    <ci> mw0339c31f_d021_4228_b50f_d73984c6647a </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mwec8d1912_a6df_4e98_858d_dc6cea4a391b </ci>
+                    <ci> mw4c2182f6_bcd1_4828_9718_f0ec6643bc8d </ci>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <cn type="integer"> -1 </cn>
+                    <ci> mwbe323d2b_9806_4644_9bba_9032be135c92 </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> mweb23c9bc_bb30_4069_bbbc_66793f88544b </ci>
+                    <ci> mw52c83577_41a9_43c5_ad71_72f2cf137f1a </ci>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <cn type="integer"> -1 </cn>
+                    <ci> mw03e6673b_c2be_4915_8db9_82601ca57d87 </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <divide/>
+                  <ci> mw32ead82e_2dd5_4623_8339_956c412e2dbf </ci>
+                  <ci> mw6350f85d_0ce2_47d6_be8b_4978f8599ded </ci>
+                </apply>
+              </apply>
+              <apply>
+                <plus/>
+                <apply>
+                  <divide/>
+                  <ci> mw32ead82e_2dd5_4623_8339_956c412e2dbf </ci>
+                  <ci> mw6350f85d_0ce2_47d6_be8b_4978f8599ded </ci>
+                </apply>
+                <ci> mwa45b50a4_601a_4ba0_a14e_280397cdd746 </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="mwf7479a7e_d495_4143_92de_57e95f26c690" name="(PGI+) G6P to F6P" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="mw0d8b580f_28dd_4313_b845_1b4dd772d614"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="mw7fbddda6_bc46_40e6_830e_16532b8cc5a3"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> mw6d6b0ad4_2d67_40dd_ab04_19727e554547 </ci>
+              <apply>
+                <divide/>
+                <ci> mw0d8b580f_28dd_4313_b845_1b4dd772d614 </ci>
+                <ci> mw28ff8d09_a941_4e1c_92f8_52f0f32a1866 </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="mwcecd3611_977e_4eab_b8dd_2fac90de9150" name="(PGI-) F6P to G6P" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="mw7fbddda6_bc46_40e6_830e_16532b8cc5a3"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="mw0d8b580f_28dd_4313_b845_1b4dd772d614"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> mw35648202_0498_4d9a_8f17_4582bc724a92 </ci>
+              <apply>
+                <divide/>
+                <ci> mw7fbddda6_bc46_40e6_830e_16532b8cc5a3 </ci>
+                <ci> mw3d1aa5f8_1c6c_49bc_8795_35d381d0ab33 </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="mw5dd7d636_4b2d_494b_a32f_7961c4c9e3fc" name="(ALD+) FBP to 2DHAP" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="mw53756e03_5880_4b8c_9416_42956bdbe7b0"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="mw1d36150c_8e87_41cb_a2b0_cd9bdd99e6bf" stoichiometry="2"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> mw7c52d184_88ee_43ff_99db_d48e00ff19dd </ci>
+              <apply>
+                <divide/>
+                <ci> mw53756e03_5880_4b8c_9416_42956bdbe7b0 </ci>
+                <ci> mwf13076d4_3f59_471d_a03c_360c8ab577b5 </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="mw8737c7e5_0246_43d7_9e83_ae694a74f614" name="(ALD-)2DHAP to FBP" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="mw1d36150c_8e87_41cb_a2b0_cd9bdd99e6bf" stoichiometry="2"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="mw53756e03_5880_4b8c_9416_42956bdbe7b0"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> mw90eb5538_2459_45c9_9904_253b03b96fa8 </ci>
+              <apply>
+                <divide/>
+                <ci> mw1d36150c_8e87_41cb_a2b0_cd9bdd99e6bf </ci>
+                <ci> mw73459e0b_f0ce_4120_8171_9e3534b0a9e8 </ci>
+              </apply>
+              <apply>
+                <divide/>
+                <ci> mw1d36150c_8e87_41cb_a2b0_cd9bdd99e6bf </ci>
+                <ci> mw73459e0b_f0ce_4120_8171_9e3534b0a9e8 </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="mwd7e75788_fc9c_462e_b699_e1afdf971d93" name="(ENO+) DHAP to PEP" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="mw1d36150c_8e87_41cb_a2b0_cd9bdd99e6bf"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="mw32ead82e_2dd5_4623_8339_956c412e2dbf"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> mwa988daaf_e5c7_4819_9b38_b84f1ae95c2d </ci>
+              <apply>
+                <power/>
+                <ci> mw7d48e978_8d94_4374_b2dd_a56cc01b156e </ci>
+                <apply>
+                  <minus/>
+                  <ci> mw0941b150_33f4_4c5f_b077_df0a87988fe4 </ci>
+                </apply>
+              </apply>
+              <apply>
+                <divide/>
+                <ci> mw1d36150c_8e87_41cb_a2b0_cd9bdd99e6bf </ci>
+                <ci> mw73459e0b_f0ce_4120_8171_9e3534b0a9e8 </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="mw3a028c67_d0ca_4d2b_ae4a_c70bdcdce6e4" name="(ENO-) PEP to DHAP" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="mw32ead82e_2dd5_4623_8339_956c412e2dbf"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="mw1d36150c_8e87_41cb_a2b0_cd9bdd99e6bf"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> mw1cc4fca6_2780_4814_b378_cf1da8a8bb55 </ci>
+              <apply>
+                <power/>
+                <ci> mw7d48e978_8d94_4374_b2dd_a56cc01b156e </ci>
+                <apply>
+                  <minus/>
+                  <ci> mw0941b150_33f4_4c5f_b077_df0a87988fe4 </ci>
+                </apply>
+              </apply>
+              <apply>
+                <divide/>
+                <ci> mw32ead82e_2dd5_4623_8339_956c412e2dbf </ci>
+                <ci> mw6350f85d_0ce2_47d6_be8b_4978f8599ded </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="mwf8d666d7_7fc6_4000_a3a9_f67496e571b8" name="(tktA+) P5P to DHAP + S7P" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="mw1907e7da_a0f9_4416_b24d_385a6ddac18a" stoichiometry="2"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="mw1d36150c_8e87_41cb_a2b0_cd9bdd99e6bf"/>
+          <speciesReference species="mwec8d1912_a6df_4e98_858d_dc6cea4a391b"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> mw7d47df1e_5a37_44ef_a56c_3ff9862f0d38 </ci>
+              <apply>
+                <divide/>
+                <ci> mw1907e7da_a0f9_4416_b24d_385a6ddac18a </ci>
+                <ci> mw5fad65cd_bdfd_455e_a7ce_740e5d27c0bd </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="mw35e6964c_622c_49b9_8aa3_a8f218e0f533" name="(tktA-)  DHAP + S7P to P5P" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="mw1d36150c_8e87_41cb_a2b0_cd9bdd99e6bf"/>
+          <speciesReference species="mwec8d1912_a6df_4e98_858d_dc6cea4a391b"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="mw1907e7da_a0f9_4416_b24d_385a6ddac18a" stoichiometry="2"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> mw6f89bd5d_4ae9_4416_a5df_1c94a806a127 </ci>
+              <apply>
+                <divide/>
+                <ci> mw1d36150c_8e87_41cb_a2b0_cd9bdd99e6bf </ci>
+                <ci> mw73459e0b_f0ce_4120_8171_9e3534b0a9e8 </ci>
+              </apply>
+              <apply>
+                <divide/>
+                <ci> mwec8d1912_a6df_4e98_858d_dc6cea4a391b </ci>
+                <ci> mw4c2182f6_bcd1_4828_9718_f0ec6643bc8d </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="mw7923d085_c5d5_46b4_b3e7_a5ff9654777d" name="(tktB+)  P5P + E4P to DHAP + F6P" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="mw1907e7da_a0f9_4416_b24d_385a6ddac18a"/>
+          <speciesReference species="mwded59a15_0067_4f92_9856_92e979b2a8b7"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="mw1d36150c_8e87_41cb_a2b0_cd9bdd99e6bf"/>
+          <speciesReference species="mw7fbddda6_bc46_40e6_830e_16532b8cc5a3"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> mw8b4abd01_0fe3_4e5d_b77f_ee2573bbc2ee </ci>
+              <apply>
+                <divide/>
+                <ci> mw1907e7da_a0f9_4416_b24d_385a6ddac18a </ci>
+                <ci> mw5fad65cd_bdfd_455e_a7ce_740e5d27c0bd </ci>
+              </apply>
+              <apply>
+                <divide/>
+                <ci> mwded59a15_0067_4f92_9856_92e979b2a8b7 </ci>
+                <ci> mw7a4874f4_9a71_4f37_9fd8_f56ed0fd9ae6 </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="mw9fa7d65d_9a37_4da7_b949_3fdea01f365b" name="(tktB-)  DHAP + F6P to P5P + E4P" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="mw1d36150c_8e87_41cb_a2b0_cd9bdd99e6bf"/>
+          <speciesReference species="mw7fbddda6_bc46_40e6_830e_16532b8cc5a3"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="mw1907e7da_a0f9_4416_b24d_385a6ddac18a"/>
+          <speciesReference species="mwded59a15_0067_4f92_9856_92e979b2a8b7"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> mwb679b2c4_80a9_495b_a1a4_d9e1514274f9 </ci>
+              <apply>
+                <divide/>
+                <ci> mw1d36150c_8e87_41cb_a2b0_cd9bdd99e6bf </ci>
+                <ci> mw73459e0b_f0ce_4120_8171_9e3534b0a9e8 </ci>
+              </apply>
+              <apply>
+                <divide/>
+                <ci> mw7fbddda6_bc46_40e6_830e_16532b8cc5a3 </ci>
+                <ci> mw3d1aa5f8_1c6c_49bc_8795_35d381d0ab33 </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="mwedffd402_f134_4a15_9bad_217bf6c6be22" name="(tal+)  DHAP + S7P to F6P + E4P" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="mw1d36150c_8e87_41cb_a2b0_cd9bdd99e6bf"/>
+          <speciesReference species="mwec8d1912_a6df_4e98_858d_dc6cea4a391b"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="mw7fbddda6_bc46_40e6_830e_16532b8cc5a3"/>
+          <speciesReference species="mwded59a15_0067_4f92_9856_92e979b2a8b7"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> mw13080cdb_5746_4798_8b8d_56e4544d951f </ci>
+              <apply>
+                <divide/>
+                <ci> mw1d36150c_8e87_41cb_a2b0_cd9bdd99e6bf </ci>
+                <ci> mw73459e0b_f0ce_4120_8171_9e3534b0a9e8 </ci>
+              </apply>
+              <apply>
+                <divide/>
+                <ci> mwec8d1912_a6df_4e98_858d_dc6cea4a391b </ci>
+                <ci> mw4c2182f6_bcd1_4828_9718_f0ec6643bc8d </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="mwe2f2c51c_8020_4aac_b808_769f18816dc6" name="(tal-)  F6P + E4P to DHAP + S7P" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="mw7fbddda6_bc46_40e6_830e_16532b8cc5a3"/>
+          <speciesReference species="mwded59a15_0067_4f92_9856_92e979b2a8b7"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="mw1d36150c_8e87_41cb_a2b0_cd9bdd99e6bf"/>
+          <speciesReference species="mwec8d1912_a6df_4e98_858d_dc6cea4a391b"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> mwc985e736_ea68_44f8_a92a_7f24e5da0899 </ci>
+              <apply>
+                <divide/>
+                <ci> mw7fbddda6_bc46_40e6_830e_16532b8cc5a3 </ci>
+                <ci> mw3d1aa5f8_1c6c_49bc_8795_35d381d0ab33 </ci>
+              </apply>
+              <apply>
+                <divide/>
+                <ci> mwded59a15_0067_4f92_9856_92e979b2a8b7 </ci>
+                <ci> mw7a4874f4_9a71_4f37_9fd8_f56ed0fd9ae6 </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="mwfd2d8c6e_f0cc_47e4_a94a_6c94de558595" name="(e4p drain)  E4P to null" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="mwded59a15_0067_4f92_9856_92e979b2a8b7"/>
+        </listOfReactants>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> mw254d8c25_fc40_4d68_a86c_1fa8851f4848 </ci>
+              <apply>
+                <divide/>
+                <ci> mwded59a15_0067_4f92_9856_92e979b2a8b7 </ci>
+                <ci> mw7a4874f4_9a71_4f37_9fd8_f56ed0fd9ae6 </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="mw9cd716de_127c_424e_bf4e_1c022083e176" name="(p5p drain)  P5P to null" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="mw1907e7da_a0f9_4416_b24d_385a6ddac18a"/>
+        </listOfReactants>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> mw2c87f10b_abc0_4a4c_9572_58711f8993de </ci>
+              <apply>
+                <divide/>
+                <ci> mw1907e7da_a0f9_4416_b24d_385a6ddac18a </ci>
+                <ci> mw5fad65cd_bdfd_455e_a7ce_740e5d27c0bd </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="mw2ab4be00_903e_4c3e_a980_efec7a2237df" name="(NADPH drain)  NADPH to null" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="mweb23c9bc_bb30_4069_bbbc_66793f88544b"/>
+        </listOfReactants>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <divide/>
+              <apply>
+                <times/>
+                <ci> mwc97bce2b_de10_4928_ad82_9d84cdb82372 </ci>
+                <ci> mweb23c9bc_bb30_4069_bbbc_66793f88544b </ci>
+              </apply>
+              <ci> mw52c83577_41a9_43c5_ad71_72f2cf137f1a </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="mw4a8cb6fa_69f0_4321_b237_26f6ab0f0acc" name="(ROS gen) null to ROS" reversible="false" fast="false">
+        <listOfProducts>
+          <speciesReference species="mw7d48e978_8d94_4374_b2dd_a56cc01b156e"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <ci> mwb337491d_8099_43d4_869c_c1641dd95912 </ci>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="mw6dfeb801_d0d4_441c_80bc_17bf51cd5fd8" name="(ROS scavenging) ROS + NADPH to null" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="mw7d48e978_8d94_4374_b2dd_a56cc01b156e"/>
+          <speciesReference species="mweb23c9bc_bb30_4069_bbbc_66793f88544b"/>
+        </listOfReactants>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> mw13294202_5299_41bc_a6b1_dfb24fe80e3e </ci>
+              <ci> mw7d48e978_8d94_4374_b2dd_a56cc01b156e </ci>
+              <ci> mwfd9791eb_a863_4ccc_bf49_2a2829697089 </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+    </listOfReactions>
+    <listOfEvents>
+      <event id="mw52877da5_f975_4714_b369_b3e37ebb8d38">
+        <trigger>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <geq/>
+              <csymbol encoding="text" definitionURL="http://www.sbml.org/sbml/symbols/time"> time </csymbol>
+              <cn type="integer"> 100 </cn>
+            </apply>
+          </math>
+        </trigger>
+        <listOfEventAssignments>
+          <eventAssignment variable="mwfd9791eb_a863_4ccc_bf49_2a2829697089">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <cn type="integer"> 1 </cn>
+            </math>
+          </eventAssignment>
+        </listOfEventAssignments>
+      </event>
+      <event id="mwa0d2df11_ce36_4f33_a0fc_593d8cbfad19">
+        <trigger>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <geq/>
+              <csymbol encoding="text" definitionURL="http://www.sbml.org/sbml/symbols/time"> time </csymbol>
+              <cn type="integer"> 100 </cn>
+            </apply>
+          </math>
+        </trigger>
+        <listOfEventAssignments>
+          <eventAssignment variable="mwb337491d_8099_43d4_869c_c1641dd95912">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <cn type="e-notation"> 7.584415 <sep/> -1 </cn>
+            </math>
+          </eventAssignment>
+        </listOfEventAssignments>
+      </event>
+    </listOfEvents>
+  </model>
+</sbml>

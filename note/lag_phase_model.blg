@@ -1,0 +1,135 @@
+This is BibTeX, Version 0.99d (TeX Live 2018)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: lag_phase_model.aux
+The style file: unsrt.bst
+Database file #1: minimal_model.bib
+Repeated entry---line 12 of file minimal_model.bib
+ : @article{scott2010interdependence
+ :                                  ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 153 of file minimal_model.bib
+ : @article{heo2010major
+ :                      ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 559 of file minimal_model.bib
+ : @article{li2014quantifying
+ :                           ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 787 of file minimal_model.bib
+ : @article{ferrell2014ultrasensitivity
+ :                                     ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1090 of file minimal_model.bib
+ : @article{deutscher2003degradation
+ :                                  ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1141 of file minimal_model.bib
+ : @article{gourse1996rrna
+ :                        ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 2141 of file minimal_model.bib
+ : @article{gourse1996rrna
+ :                        ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 2358 of file minimal_model.bib
+ : @article{deutscher2003degradation
+ :                                  ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 2368 of file minimal_model.bib
+ : @article{kubitschek1984independence
+ :                                    ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 2458 of file minimal_model.bib
+ : @article{li2014quantifying
+ :                           ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 2686 of file minimal_model.bib
+ : @article{ferrell2014ultrasensitivity
+ :                                     ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 2879 of file minimal_model.bib
+ : @article{maitra2015bacterial
+ :                             ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 2989 of file minimal_model.bib
+ : @article{deutscher2003degradation
+ :                                  ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 3000 of file minimal_model.bib
+ : @article{piir2011ribosome
+ :                          ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 3011 of file minimal_model.bib
+ : @article{lemke2011direct
+ :                         ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 3040 of file minimal_model.bib
+ : @article{gourse1996rrna
+ :                        ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 3172 of file minimal_model.bib
+ : @article{klumpp2013molecular
+ :                             ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 3194 of file minimal_model.bib
+ : @article{aidelberg2014hierarchy
+ :                                ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 3246 of file minimal_model.bib
+ : @article{marr1991growth
+ :                        ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 3329 of file minimal_model.bib
+ : @article{bremer2008modulation
+ :                              ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 3437 of file minimal_model.bib
+ : @article{basan2015inflating
+ :                            ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 3753 of file minimal_model.bib
+ : @article{hui2015quantitative
+ :                             ,
+I'm skipping whatever remains of this entry
+You've used 29 entries,
+            1791 wiz_defined-function locations,
+            639 strings with 10241 characters,
+and the built_in function-call counts, 7738 in all, are:
+= -- 659
+> -- 445
+< -- 0
++ -- 159
+- -- 130
+* -- 692
+:= -- 1286
+add.period$ -- 87
+call.type$ -- 29
+change.case$ -- 29
+chr.to.int$ -- 0
+cite$ -- 29
+duplicate$ -- 260
+empty$ -- 687
+format.name$ -- 130
+if$ -- 1617
+int.to.chr$ -- 0
+int.to.str$ -- 29
+missing$ -- 29
+newline$ -- 148
+num.names$ -- 29
+pop$ -- 29
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 95
+stack$ -- 0
+substring$ -- 679
+swap$ -- 29
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 0
+while$ -- 79
+width$ -- 31
+write$ -- 321
+(There were 22 error messages)

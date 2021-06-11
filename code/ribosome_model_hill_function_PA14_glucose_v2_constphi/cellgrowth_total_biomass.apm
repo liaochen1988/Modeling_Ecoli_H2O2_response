@@ -1,0 +1,68 @@
+Parameters
+    
+    p
+    k_o             = 0.0508
+    Km_o            = 0.0168
+    k_d             = 1.7884e+04
+    Km_d            = 5900
+    f_u             = 6.4799e3
+    f_o             = 35.7342
+    Vin             = 1e-15
+    Vout            = 0.2e-3
+    k_u             = 4.2114
+    Km_u            = 4.8e-4
+    Ki_u            = 0.5
+    n_u             = 1
+    e_g             = 0.0033
+    k_diff          = 900
+    r_g0            = 0.025
+    r_mc            = 0 # 0.012
+    beta            = 3.0e6
+    m_r             = 11738
+    m_e             = 325
+    k_r             = 7.56e4
+    K_ma            = 20
+    K_ix            = 60
+    k_x             = 3.6e3
+    d_x             = 1.26e2
+    K_ia            = 1e4
+
+Variables
+
+	h2o2_in         = 0, >=0
+	h2o2_out        = 3.44, >=0
+    carbon          = 0.25, >=0 
+    cellN           = 1.1e7, >=0
+    aa              = 1, >=0
+    Rprot           = 1, >=0, <=beta/m_r
+    Xreg            = 1, >=0
+    phi             = 1, >=0, <=1
+    Eprot           = 1e3, >=0, <=beta/m_e
+    int_growth_rate = 0, >=0
+
+Intermediates
+
+    r_a             = k_r*Rprot*aa/(K_ma+aa)
+    r_o             = k_o*carbon/(Km_o+carbon)
+    act             = 1/(1+(h2o2_in/Ki_u)^n_u)
+    r_u             = k_u*Eprot*phi*act*carbon/(Km_u+carbon)*K_ia/(K_ia+aa)
+    r_d             = k_d*Eprot*(1-phi)*act*h2o2_in/(Km_d+h2o2_in)*carbon/(Km_u+carbon)
+    r_g             = r_a/beta
+    r_r             = r_a/m_r*K_ix/(K_ix+Xreg)
+    r_e             = r_a/m_e*(1-K_ix/(K_ix+Xreg))
+    r_x             = k_x*K_ma/(K_ma+aa)
+    
+Equations
+    
+    maximize p*int_growth_rate
+    r_g >= 0
+
+    $h2o2_in     = f_u*(r_g+r_g0) - r_d - k_diff*(h2o2_in-h2o2_out)
+    $h2o2_out    = f_o*r_o + cellN*k_diff*(h2o2_in-h2o2_out)*Vin/(Vout-cellN*Vin)
+    $carbon      = -r_o - r_u*cellN*Vin/Vout
+    $cellN       = (r_g-r_mc)*cellN
+    $aa          = r_u*e_g*beta-r_a-r_g*aa
+    $Rprot       = r_r-r_g*Rprot
+	$Xreg        = r_x-d_x*Xreg-r_g*Xreg
+    $Eprot       = r_e-r_g*Eprot
+    $int_growth_rate    = r_g
